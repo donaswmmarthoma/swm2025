@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Muncipality Registration</title>
+    </head>
+    <body align="center">
+        <h1>Registration Form</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ loginform.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

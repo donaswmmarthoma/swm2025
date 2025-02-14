@@ -1,0 +1,30 @@
+{% extends 'header.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Public Dustbin view</title>
+</head>
+<body align="center">
+    <h1>Muncipality Dustbins</h1>
+    <table class="table table-striped" align="center">
+        <tr>
+            <th>Dustbin ID</th>
+            <th>Location</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in public_dustbin_view %}
+           <tr>
+           <td>{{ data.dustbin_id }}</td>
+           <td>{{ data.location }}</td>
+           <td><a class="btn btn-primary" href="{% url 'public_dustbin_update' data.id %}">Edit</a></td>
+           <td><a class="btn btn-secondary" href="{% url 'public_dustbin_delete' data.id %}">Delete</a></td>
+          
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

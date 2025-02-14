@@ -1,0 +1,53 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body align="center">
+        <h1>Municipality Dustbin</h1>
+
+       
+        {% if messages %}
+            <div class="alert">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <form action="{% url 'dustbin_public_search' %}" method="get">
+            {% csrf_token %}
+                <input type="search" name="search" placeholder="Search here">
+                <input type="submit" value="Search">
+        </form>
+        <table class="table table-striped" align="center">
+            <thead>
+                <tr>
+                    <th>Dustbin ID</th>
+                    <th>Location</th>
+                    <th>Dump Waste</th>
+                    <th>Total Waste added</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in dustbin_public_search %}
+                    <tr>
+                        <td>{{ data.dustbin_id }}</td>
+                        <td>{{ data.location }}</td>
+                        <td><a class="btn btn-primary" href ="{% url 'wasteupdates' data.id %}">Dump Waste</a></td>
+                        <td><a class="btn btn-secondary" href ="{% url 'totalwaste' data.id %}">Total Waste</a></td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="2">No dustbins found.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
+{% endblock %}

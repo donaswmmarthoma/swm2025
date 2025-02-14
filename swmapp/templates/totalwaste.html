@@ -1,0 +1,82 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<html>
+    <head>
+        <title>Municipality Dustbin</title>
+        <style>
+            h1 {
+                color: #4CAF50;
+                margin-bottom: 30px;
+                font-size: 2.5em;
+            }
+
+            table {
+                width: 60%;
+                margin: 0 auto;
+                border-collapse: collapse;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #4CAF50;
+                color: white;
+                font-weight: bold;
+            }
+
+            tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            td {
+                font-size: 1.2em;
+            }
+
+           
+
+            .table-title {
+                font-size: 1.5em;
+                margin-bottom: 20px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .value {
+                font-size: 1.5em;
+                color: #4CAF50;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Total Waste Updated </h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Total Weight Waste</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-title">Total Waste</td>
+                        <td class="value">{{total_waste}} kg</td>
+                    </tr>
+                    <tr>
+                        <td class="table-title">Last Entry</td>
+                        <td class="value">{{last_waste_kg}} kg | </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
+{% endblock %}

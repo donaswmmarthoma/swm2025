@@ -1,0 +1,17 @@
+{% extends 'regheader.html' %}
+{% block content %}
+<html>
+    <head>
+        <title>Public Dustbin Registration</title>
+    </head>
+    <body align="center">
+         {% comment %} <h1>Registration Form</h1> {% endcomment %}
+        <form method="post">
+            {% csrf_token %}
+            {{ public_dustbinform.as_p}}
+            {% comment %} {{ loginform.as_p }}  {% endcomment %}
+            <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+{% endblock %}

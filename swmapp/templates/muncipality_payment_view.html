@@ -1,0 +1,40 @@
+{% extends 'header.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Muncipality Payment Table</title>
+</head>
+<body align="center">
+    <h1></h1>
+    <table class="table table-striped" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>District</th>
+            <th>City</th>
+            <th>Muncipality</th> 
+            <th>Village</th>
+            <th>Contact Number</th>
+            <th>Rationcard</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in muncipality_payment_view %}
+           <tr>
+           <td>{{ data.login_id.log.name }}</td>
+           <td>{{ data.address }}</td>
+           <td>{{ data.login_id.log.district }}</td>
+           <td>{{ data.login_id.log.city }}</td>
+           <td>{{ data.muncipality }}</td>
+           <td>{{ data.login_id.log.village }}</td>
+           <td>{{ data.contact_no }}</td>
+           <td>{{ data.login_id.log.rationcard_no }}</td>
+           <td>{{ data.login_id.email }}</td>
+           </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

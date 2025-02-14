@@ -1,0 +1,17 @@
+{% extends 'regheader.html' %}
+{% block content %}
+<html>
+    <head>
+        <title>Public Registration</title>
+    </head>
+    <body align="center">
+        <!-- <h1>Registration Form</h1> -->
+        <form method="post">
+            {% csrf_token %}
+            {{ publicform.as_p}}
+            {{ loginform.as_p }}
+            <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+{% endblock %}

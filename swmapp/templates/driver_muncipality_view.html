@@ -1,0 +1,34 @@
+{% extends 'header.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Registeration Table</title>
+</head>
+<body align="center">
+    <h1> Drivers</h1>
+    <table class="table table-striped" align="center">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Muncipality</th> 
+            <th>Contact Number</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in driver_muncipality_view %}
+           <tr>
+           <td>{{ data.name }}</td>
+           <td>{{ data.gender }}</td>
+           <td>{{ data.age }}</td>
+           <td>{{ data.municipality }}</td>
+           <td>{{ data.contact_no }}</td>
+           <td>{{ data.login_id.email }}</td>
+           </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

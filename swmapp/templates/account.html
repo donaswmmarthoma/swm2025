@@ -1,0 +1,17 @@
+{% extends 'regheader.html' %}
+{% block content %}
+<html>
+    <head>
+        <title>account</title>
+    </head>
+    <body align="center">
+         <h1>Account</h1> 
+        <form method="post">
+            {% csrf_token %}
+            {{ accountform.as_p}}
+            
+            <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+{% endblock %}

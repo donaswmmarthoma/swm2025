@@ -1,0 +1,16 @@
+{% extends 'regheader.html' %}
+{% block content %}
+<html>
+    <head>
+        <title>waste update</title>
+    </head>
+    <body align="center">
+        <h1> Update your Waste Details!!</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+{% endblock %}
