@@ -499,7 +499,7 @@ def totalwaste(request,id):
     last_entry = waste_entries.order_by('-date').first()
     last_waste_kg = last_entry.weight if last_entry else 0
 
-    context = {    
+    context = {            
         'total_waste': total_waste,
         'last_waste_kg': last_waste_kg,
         'waste_entries': waste_entries
