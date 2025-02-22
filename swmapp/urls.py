@@ -38,6 +38,6 @@ urlpatterns = [
     path('dustbin_public_search', views.dustbin_public_search, name='dustbin_public_search'),
     path('wasteupdates/<int:id>', views.wasteupdates, name='wasteupdates'),
     path('totalwaste/<int:id>', views.totalwaste, name='totalwaste'),
-
+    path('muncipality_waste_notifications', views.muncipality_waste_notifications, name='muncipality_waste_notifications'),
 ]
     

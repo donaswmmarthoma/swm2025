@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Municipality Waste Notifications</title>
+</head>
+<body>
+    <h1>Municipality Waste Notifications</h1>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if notifications %}
+        <ul>
+            {% for notification in notifications %}
+                <li style="color: red;">{{ notification }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dustbin has reached 100kg.</p>
+    {% endif %}
+
+</body>
+</html>
+
+{% endblock %}

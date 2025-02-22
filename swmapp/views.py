@@ -495,16 +495,49 @@ def totalwaste(request,id):
 
   
     total_waste = waste_entries.aggregate(total=Sum('weight'))['total'] or 0
-
+    rewards = waste_entries.aggregate(total=Sum('reward'))['total'] or 0
     last_entry = waste_entries.order_by('-date').first()
     last_waste_kg = last_entry.weight if last_entry else 0
 
     context = {            
         'total_waste': total_waste,
         'last_waste_kg': last_waste_kg,
-        'waste_entries': waste_entries
-    }
+        'rewards': rewards,
+  }
     return render(request, 'totalwaste.html', context)
+
+def muncipality_waste_notifications(request):
+    # Retrieve the logged-in municipality from session
+    login_id = request.session.get('muncipalityid')
+    logdata = get_object_or_404(LoginTable, id=login_id)
+    
+    # Get all dustbins associated with the logged-in municipality
+    dustbins = Public_Dustbin_Register.objects.filter(login_id=logdata)
+
+    notifications = []
+
+    for dustbin in dustbins:
+        # Get all waste entries for this dustbin and calculate the total weight
+        waste_entries = WasteUpdates.objects.filter(dustbin_id=dustbin)
+        
+        # Convert the weight into a numeric value and sum it up
+        total_weight = waste_entries.aggregate(Sum('weight'))['weight__sum']
+        
+        if total_weight is None:
+            total_weight = 0  # In case there are no waste entries yet
+
+        # Check if the total weight has reached 100kg
+        if total_weight >= 100:
+            notifications.append(f"Alert: The total weight of waste in dustbin {dustbin.dustbin_id} has reached 100kg.")
+    
+    context = {
+        'dustbins': dustbins,
+        'notifications': notifications,
+    }
+
+    return render(request, 'muncipality_waste_notification.html', context)
+
+
 
 
 
