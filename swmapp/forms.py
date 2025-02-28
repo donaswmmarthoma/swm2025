@@ -60,5 +60,17 @@ class WasteUpdateForm(forms.ModelForm):
         model = WasteUpdates
         fields = ['weight'] 
 
+class ComplaintForm(forms.ModelForm): 
+    
+    class Meta:
+        model = Complaints
+        fields = ['complaints'] 
+
+class ReplyForm(forms.ModelForm): 
+    
+    class Meta:
+        model = Complaints
+        fields = ['reply'] 
+
         
     

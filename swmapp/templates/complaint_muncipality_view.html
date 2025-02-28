@@ -1,0 +1,32 @@
+{% extends 'header.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Complaint Muncipality View</title>
+</head>
+<body align="center">
+    <h1>View Complaints</h1>
+    <table class="table table-striped" align="center">
+        <tr>
+            <th>Complaint</th>
+            <th>Issued Date</th>
+            <th>Issued Person</th>
+            <th>Contact Number</th>
+            <th>Reply</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in complaint_muncipality_view %}
+           <tr>
+           <td>{{ data.complaints }}</td>
+           <td>{{ data.date }}</td>
+           <td>{{ data.login_id.name }}</td>
+           <td>{{ data.login_id.contact_no }}</td>
+           <td><a class="btn btn-primary" href="{% url 'reply' id=data.id %}">Reply</a></td>
+         </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

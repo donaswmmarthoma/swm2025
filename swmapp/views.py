@@ -146,15 +146,55 @@ def Driver_Reg(request):
 def muncipality_adminview(request):
     adminview = MuncipalityReg.objects.all()
     return render(request, 'muncipality_adminview.html', {'muncipality_adminview':adminview}) 
+
+def admin_muncipality_accept(request,id):
+    accept = get_object_or_404(LoginTable,id=id)
+    accept.status = 1
+    accept.save()
+    return redirect('muncipality_adminview')
+
+def admin_muncipality_reject(request,id):
+    reject = get_object_or_404(LoginTable,id=id)
+    reject.status = 2
+    reject.save()
+    return redirect('muncipality_adminview')
+
+
 def public_adminview(request):
     adminview = PublicReg.objects.all()
     return render(request, 'public_adminview.html', {'public_adminview':adminview}) 
 def harithakarma_adminview(request):
     adminview = HarithakarmaReg.objects.all()
     return render(request, 'harithakarma_adminview.html', {'harithakarma_adminview':adminview}) 
+
+def admin_harithakarma_accept(request,id):
+    accept = get_object_or_404(LoginTable,id=id)
+    accept.status = 1
+    accept.save()
+    return redirect('harithakarma_adminview')
+
+def admin_harithakarma_reject(request,id):
+    reject = get_object_or_404(LoginTable,id=id)
+    reject.status = 2
+    reject.save()
+    return redirect('harithakarma_adminview')
+
 def driver_adminview(request):
     adminview = DriverReg.objects.all()
     return render(request, 'driver_adminview.html', {'driver_adminview':adminview}) 
+
+
+def admin_driver_accept(request,id):
+    accept = get_object_or_404(LoginTable,id=id)
+    accept.status = 1
+    accept.save()
+    return redirect('driver_adminview')
+
+def admin_driver_reject(request,id):
+    reject = get_object_or_404(LoginTable,id=id)
+    reject.status = 2
+    reject.save()
+    return redirect('driver_adminview')
 
 
     
@@ -536,6 +576,112 @@ def muncipality_waste_notifications(request):
     }
 
     return render(request, 'muncipality_waste_notification.html', context)
+
+def dustbin_harithakarma_search(request):
+    search = request.GET.get('search')
+    if search:
+        dustbindata = Public_Dustbin_Register.objects.filter(
+            Q(location__icontains=search) | Q(dustbin_id__icontains=search)
+        )
+    else:
+        dustbindata = Public_Dustbin_Register.objects.all()
+    
+    return render(request, 'dustbin_harithakarma_search.html', {'dustbin_harithakarma_search': dustbindata})
+
+def dustbin_driver_search(request):
+    search = request.GET.get('search')
+    if search:
+        dustbindata = Public_Dustbin_Register.objects.filter(
+            Q(location__icontains=search) | Q(dustbin_id__icontains=search)
+        )
+    else:
+        dustbindata = Public_Dustbin_Register.objects.all()
+    
+    return render(request, 'dustbin_driver_search.html', {'dustbin_driver_search': dustbindata})
+
+
+def complaint_reg(request):
+    id = request.session.get('publicid')
+    data = get_object_or_404(PublicReg, login_id=id)  
+    print(data)
+    
+    if request.method == 'POST':
+        form = ComplaintForm(request.POST)
+        if form.is_valid():
+            complaint = form.save(commit=False)  
+            complaint.login_id= data 
+            complaint.save() 
+            return redirect('usertemplate')
+    else:
+        form = ComplaintForm()
+    
+    return render(request, 'complaints.html', {'form': form})
+
+
+def complaint_muncipality_view(request):
+    login_id = request.session.get('muncipalityid')
+    data = get_object_or_404(MuncipalityReg,login_id=login_id)
+    complaintdata = Complaints.objects.filter(login_id__muncipality=data)
+    return render(request, 'complaint_muncipality_view.html', {'complaint_muncipality_view': complaintdata})
+    
+def complaint_update(request, id):
+    data = get_object_or_404(Complaints, id=id)
+    
+    if request.method == 'POST':
+        updateform = ComplaintForm(request.POST, instance=data)
+        
+        if updateform.is_valid():
+            updateform.save()
+            return redirect('complaint_user_view')  
+    else:
+        updateform = ComplaintForm(instance=data) 
+    
+    return render(request, 'complaint_update.html', {'updateform': updateform})
+
+def complaint_delete(request, id):
+    data = get_object_or_404(Complaints,id=id)
+    data.delete()
+    return redirect('complaint_user_view')
+
+
+
+def complaint_user_view(request):
+    login_id = request.session.get('publicid')
+  
+    # data = get_object_or_404(MuncipalityReg, login_id=login_id)
+    complaintdata = Complaints.objects.all()
+    
+    return render(request, 'complaint_user_view.html', {'complaint_user_view': complaintdata})
+
+
+def reply(request, id):
+    id = request.session.get('publicid') 
+    data = get_object_or_404(Complaints,id=id)  
+    #print(data) 
+    
+    if request.method == 'POST':
+        form = ReplyForm(request.POST)
+        if form.is_valid():
+            reply = form.save(commit=False)
+            reply.loginid = data  
+            reply.save()
+            return redirect('muncipalityhome')
+    else:
+        form = ReplyForm()
+    
+    return render(request, 'reply.html', {'form': form})
+
+    
+
+    
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Home Three || Wostin || Wostin HTML Template For Business </title>
+    <title>  Wostin  </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'usertemplate/assets/images/favicons/apple-touch-icon.png'%}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'usertemplate/assets/images/favicons/favicon-32x32.png'%}" />
@@ -70,14 +70,14 @@
                         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                         <ul class="main-menu__list">
                             <li class="dropdown">
-                                <a href="index.html">Home</a>
+                                <a href="{% url 'home' %}">Home</a>
                                 <ul>
-                                    <li>
+                                    {% comment %} <li>
                                         <a href="index.html">Home One</a>
                                     </li>
                                     <li><a href="index2.html">Home Two</a></li>
                                     <li><a href="index3.html">Home Three</a></li>
-                                    <li class="dropdown">
+                                    <li class="dropdown"> {% endcomment %}
                                         <a href="#">Header Styles</a>
                                         <ul>
                                             <li><a href="index.html">Header One</a></li>
@@ -280,7 +280,8 @@
                             <li class="dropdown">
                                 <a href="#">Pages</a>
                                 <ul>
-                                    <li><a href="projects.html">Projects</a></li>
+                                    <li><a href="{% url 'dustbin_harithakarma_search' %}">Municipality Dustbins</a></li>
+
                                     <li><a href="projects-carousel.html">Projects Carousel</a></li>
                                     <li><a href="project-details.html">Project Details</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>

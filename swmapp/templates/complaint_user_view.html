@@ -1,0 +1,34 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<html>
+<head>
+    <title>Complaints</title>
+</head>
+<body align="center">
+    <h1>See your complaints !!!</h1>
+    <table class="table table-striped" align="center">
+        <thead>
+            <tr>
+                <th>Complaint</th>
+                <th>Issued Date</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for data in complaint_user_view %}
+            <tr>
+                <td>{{ data.complaints }}</td>
+                <td>{{ data.date }}</td>
+                <td><a class="btn btn-primary" href="{% url 'complaint_update' data.id %}">Edit</a></td>
+                <td><a class="btn btn-secondary" href="{% url 'complaint_delete' data.id %}">Delete</a></td>
+                
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>  
+{% endblock %}
+

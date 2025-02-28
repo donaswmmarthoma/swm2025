@@ -332,9 +332,9 @@
                                             <ul>
                                                 <li><a href="{% url 'dustbin_user_view' %}">Dustbin Details</a></li>
                                                 <li><a href="{% url 'dustbin_public_search' %}">Public Dustbin</a></li>
-                                                <li><a href="pricing.html">Pricing</a></li>
-                                                <li><a href="request-pickup.html">Request A Pickup</a></li>
-                                                <li><a href="staff.html">Staff</a></li>
+                                                {% comment %} <li><a href="pricing.html">Pricing</a></li> {% endcomment %}
+                                                <li><a href="{% url 'complaints' %}">Complaints</a></li>
+                                                <li><a href="{% url 'complaint_user_view' %}">View Your Complaints</a></li>
                                                 <li><a href="staff-carousel.html">Staff Carousel</a></li>
                                                 <li><a href="staff-details.html">Staff Details</a></li>
                                                 <li><a href="testimonials.html">Testimonials</a></li>

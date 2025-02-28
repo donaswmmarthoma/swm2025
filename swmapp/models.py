@@ -5,6 +5,8 @@ class LoginTable(models.Model):
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=10)
     usertype = models.CharField(max_length=20,null=True)
+    status = models.IntegerField()
+    
 class MuncipalityReg(models.Model):
     muncipality_name = models.CharField(max_length=100)
     address = models.TextField()
@@ -82,6 +84,12 @@ class WasteUpdates(models.Model):
     weight = models.CharField( max_length=60)
     date = models.DateTimeField(auto_now_add=True)
     reward = models.CharField( max_length=50)
+
+class Complaints(models.Model):
+    complaints = models.CharField( max_length=100)
+    login_id = models.ForeignKey(PublicReg,on_delete=models.CASCADE) 
+    date = models.DateField(auto_now_add=True)
+    reply =  models.CharField( max_length=100)
 
 
 

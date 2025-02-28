@@ -330,6 +330,8 @@
                           <th>Municipality</th> 
                           <th>Contact Number</th>
                           <th>Email</th>
+                          <th>Accept</th>
+                          <th>Reject</th>
                         </tr>
                       </thead>
 
@@ -343,6 +345,16 @@
                          <td>{{ data.municipality }}</td>
                          <td>{{ data.contact_no }}</td>
                          <td>{{ data.login_id.email }}</td>
+                         {% if data.login_id.status == 0 %}
+                         <td><a class="btn btn-primary" href="{% url 'admin_driver_accept' data.login_id.id %}">Accept</a></td>
+                         <td><a class="btn btn-secondary" href="{% url 'admin_driver_reject' data.login_id.id %}">Reject</a></td>
+                         {% elif data.login_id.status == 1 %}
+                         <td><a class="btn btn-primary" href="">Accepted</a></td>
+                         <td><a class="btn btn-secondary" href="{% url 'admin_driver_reject' data.login_id.id %}">Reject</a></td>
+                         {% else  %}
+                         <td><a class="btn btn-primary" href="{% url 'admin_driver_accept' data.login_id.id %}">Accept</a></td>
+                         <td><a class="btn btn-secondary" href="">Rejected</a></td>
+                         {% endif %}
                          </tr>
                         {% endfor %}
                       </tbody>
