@@ -131,7 +131,7 @@
                                         </li>
                                         <li class="dropdown megamenu">
                                             <a href="{% url 'services' %}">Our Services</a>
-                                            <ul>
+                                             <ul>
                                                 <li>
                                                     <div class="service-tabs">
                                                         <div class="container">
@@ -318,13 +318,13 @@
                                                     </div><!-- /.service-tabs -->
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> 
                                         <li class="dropdown">
-                                            <a href="#">Industries</a>
+                                            <a href="#">Notifications</a>
                                             <ul>
-                                                <li><a href="industries.html">Industries</a></li>
-                                                <li><a href="industries-carousel.html">Industries Carousel</a></li>
-                                                <li><a href="industry-details.html">Industry Details</a></li>
+                                                <li><a href="{% url 'notify_user_view' %}">See Notifications</a></li>
+                                                {% comment %} <li><a href="industries-carousel.html">Industries Carousel</a></li>
+                                                <li><a href="industry-details.html">Industry Details</a></li> {% endcomment %}
                                             </ul>
                                         </li>
                                         <li class="dropdown">
@@ -335,7 +335,7 @@
                                                 {% comment %} <li><a href="pricing.html">Pricing</a></li> {% endcomment %}
                                                 <li><a href="{% url 'complaints' %}">Complaints</a></li>
                                                 <li><a href="{% url 'complaint_user_view' %}">View Your Complaints</a></li>
-                                                <li><a href="staff-carousel.html">Staff Carousel</a></li>
+                                                {% comment %} <li><a href="{% url 'notify_user_view' %}">Staff Ca</a></li> {% endcomment %}
                                                 <li><a href="staff-details.html">Staff Details</a></li>
                                                 <li><a href="testimonials.html">Testimonials</a></li>
                                                 <li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
@@ -354,7 +354,7 @@
                                                 <li><a href="news-details.html">News Details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        {% comment %} <li><a href="contact.html">Contact</a></li> {% endcomment %}
                                     </ul>
                                 </div>
                                 <div class="main-menu-two__search-box">
@@ -362,7 +362,7 @@
                                 </div>
                             </div>
                             <div class="main-menu-two__btn-box">
-                                <a href="{% url 'apply_dustbin' %}" class="thm-btn main-menu-two__btn">Request a Pickup</a>
+                                <a href="{% url 'logout' %}" class="thm-btn main-menu-two__btn">Log out</a>
                             </div>
                         </div>
                     </div>
@@ -396,7 +396,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-2-1.jpg' %});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/swm.jpg' %});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-two__big-text">wostin</div>
@@ -430,7 +430,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-2-2.jpg'%});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/images2.jpeg'%});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-two__big-text">wostin</div>
@@ -464,7 +464,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-2-3.jpg'%});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/images.jpeg'%});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-two__big-text">wostin</div>

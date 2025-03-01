@@ -25,8 +25,8 @@ class PublicReg(models.Model):
     city = models.CharField(max_length=100)
     muncipality = models.ForeignKey(MuncipalityReg,on_delete=models.CASCADE)
     village = models.CharField(max_length=100)
-    contact_no = models.IntegerField()
-    rationcard_no = models.IntegerField()
+    contact_no = models.IntegerField(unique=True)
+    rationcard_no = models.IntegerField(unique=True)
     login_id = models.OneToOneField(LoginTable,on_delete=models.CASCADE,related_name="log")
 class HarithakarmaReg(models.Model):
     harithakarma_id = models.CharField(max_length=100,unique=True)
@@ -91,5 +91,15 @@ class Complaints(models.Model):
     date = models.DateField(auto_now_add=True)
     reply =  models.CharField( max_length=100)
 
+class Notifications(models.Model):
+    notifications = models.CharField( max_length=100)
+    login_id = models.ForeignKey(MuncipalityReg,on_delete=models.CASCADE) 
+    date = models.DateField(auto_now_add=True)
 
+class WasteCollection(models.Model):
+    dustbin_id = models.ForeignKey(DustbinReg,on_delete=models.CASCADE) 
+    harithakarma_id = models.ForeignKey(HarithakarmaReg,on_delete=models.CASCADE) 
+    date = models.DateField(auto_now_add=True)
+    time = models.TimeField(auto_now_add=True)
 
+ 

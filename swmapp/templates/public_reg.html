@@ -8,8 +8,48 @@
         <!-- <h1>Registration Form</h1> -->
         <form method="post">
             {% csrf_token %}
-            {{ publicform.as_p}}
-            {{ loginform.as_p }}
+            <table align="center">
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td>{{publicform.name}}</td>
+                </tr> 
+                <tr>
+                    <td><label>Address:</label></td>
+                    <td>{{publicform.address}}</td>
+                </tr>
+                <tr>
+                    <td><label>District:</label></td>
+                    <td>{{publicform.district}}</td>
+                </tr> 
+                <tr>
+                    <td><label>City:</label></td>
+                    <td>{{publicform.city}}</td>
+                </tr>  
+                <tr>
+                    <td><label>Muncipality:</label></td>
+                    <td>{{publicform.muncipality}}</td>
+                </tr>  
+                <tr>
+                    <td><label>Village:</label></td>
+                    <td>{{publicform.village}}</td>
+                </tr>    
+                <tr>
+                    <td><label>Contact Number:</label></td>
+                    <td>{{publicform.contact_no}}</td>
+                </tr>
+                <tr>
+                    <td><label>Rationcard Number:</label></td>
+                    <td>{{publicform.rationcard_no}}</td>
+                </tr>
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td>{{loginform.email}}</td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td>{{loginform.password}}</td>
+                </tr>
+            </table>
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
     </body>

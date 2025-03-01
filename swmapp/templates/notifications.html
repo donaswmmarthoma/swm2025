@@ -2,15 +2,15 @@
 {% block content %}
 <html>
     <head>
-        <title>Complaints</title>
+        <title>Notifications</title>
     </head>
     <body align="center">
-        <h1> Reply to the Complaints!</h1>
+        <h1>Enter Notifications</h1>
         <form method="post">
             {% csrf_token %}
             <div>
-            <label>Reply:</label>
-            <textarea name="reply" ></textarea>
+            <label>Notifications</label>
+            <textarea name="notifications" ></textarea>
             </div>
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>

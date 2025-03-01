@@ -1,8 +1,9 @@
 from django import forms
 from . models import *
 class MuncipalityRegister(forms.ModelForm): 
+
     class Meta:
-        model = MuncipalityReg
+        model = MuncipalityReg 
         fields = ['muncipality_name','address','city','thaluk','contact_no']
 class LoginForm(forms.ModelForm): 
     class Meta:
@@ -72,5 +73,9 @@ class ReplyForm(forms.ModelForm):
         model = Complaints
         fields = ['reply'] 
 
-        
+class NotificationForm(forms.ModelForm): 
+    
+    class Meta:
+        model = Notifications
+        fields = ['notifications']       
     

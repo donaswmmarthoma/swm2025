@@ -21,9 +21,12 @@
             <tr>
                 <td>{{ data.complaints }}</td>
                 <td>{{ data.date }}</td>
+                {% if data.reply == '' %}
                 <td><a class="btn btn-primary" href="{% url 'complaint_update' data.id %}">Edit</a></td>
                 <td><a class="btn btn-secondary" href="{% url 'complaint_delete' data.id %}">Delete</a></td>
-                
+                {% else %}
+                <td>{{ data.reply }}</td>
+                {% endif %}
             </tr>
           {% endfor %}
         </tbody>

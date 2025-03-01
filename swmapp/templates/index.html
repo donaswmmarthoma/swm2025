@@ -55,9 +55,9 @@
 </head>
 
 <body>
-    <div class="preloader">
+    {% comment %} <div class="preloader">
         <img class="preloader__image" width="60" src="{% static 'usertemplate/assets/images/loader.png'%}" alt="" />
-    </div>
+    </div> {% endcomment %}
     <!-- /.preloader -->
     <div class="page-wrapper">
         <header class="main-header-two clearfix">
@@ -147,7 +147,7 @@
                                                                                 <span>Dumpster Rental</span>
                                                                             </li>
                                                                             <li data-tab="#service-3" class="tab-btn">
-                                                                                <span>Portable Toilet</span>
+                                                                                <span></span>
                                                                             </li>
                                                                             <li data-tab="#service-4" class="tab-btn">
                                                                                 <span>Recylcing Services</span>
@@ -330,9 +330,9 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#">Pages</a>
+                                            {% comment %} <a href="#">Pages</a> {% endcomment %}
                                             <ul>
-                                                <li><a href="projects.html">Projects</a></li>
+                                                {% comment %} <li><a href="projects.html">Projects</a></li>
                                                 <li><a href="projects-carousel.html">Projects Carousel</a></li>
                                                 <li><a href="project-details.html">Project Details</a></li>
                                                 <li><a href="pricing.html">Pricing</a></li>
@@ -344,25 +344,25 @@
                                                 <li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
                                                 <li><a href="gallery.html">Gallery</a></li>
                                                 <li><a href="faq.html">FAQs</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
+                                                <li><a href="404.html">404 Error</a></li> {% endcomment %}
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="#">News</a>
+                                            {% comment %} <a href="#">News</a> {% endcomment %}
                                             <ul>
-                                                <li><a href="news.html">News</a></li>
+                                                {% comment %} <li><a href="news.html">News</a></li>
                                                 <li><a href="news-carousel.html">News Carousel</a></li>
                                                 <li><a href="news-sidebar.html">News Sidebar Right</a></li>
                                                 <li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
-                                                <li><a href="news-details.html">News Details</a></li>
+                                                <li><a href="news-details.html">News Details</a></li> {% endcomment %}
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        {% comment %} <li><a href="contact.html">Contact</a></li> {% endcomment %}
                                     </ul>
                                 </div>
-                                <div class="main-menu-two__search-box">
+                                {% comment %} <div class="main-menu-two__search-box">
                                     <a href="#" class="main-menu-two__search search-toggler icon-magnifying-glass"></a>
-                                </div>
+                                </div> {% endcomment %}
                             </div>
                             <div class="main-menu-two__btn-box">
                                 <a href="{% url 'login' %}" class="thm-btn main-menu-two__btn">Login</a>
@@ -399,7 +399,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-2-1.jpg' %});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/swm4.jpg' %});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-two__big-text">wostin</div>
@@ -433,7 +433,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-2-2.jpg'%});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/swm.jpg'%});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-two__big-text">wostin</div>
@@ -467,7 +467,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-2-3.jpg'%});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/swm4.jpg'%});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-two__big-text">wostin</div>
@@ -477,7 +477,7 @@
                                     <div class="col-xl-6">
                                         <div class="main-slider__content">
                                             <h2>Home & Business <br> Waste Pickup <br> Solution</h2>
-                                            <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
+                                            {% comment %} <a href="request-pickup.html" class="thm-btn">Request a Pickup</a> {% endcomment %}
                                         </div>
                                     </div>
                                     <div class="col-xl-6">

@@ -1,0 +1,39 @@
+{% extends 'header.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Dustbin User View</title>
+</head>
+<body align="center">
+    <h1> Dustbin Details</h1>
+    <table class="table table-striped" align="center">
+        <tr>
+            <th>Building Category</th>
+            <th>Address</th>
+            <th>Muncipality</th>
+            <th>Contact Number</th>
+            <th>Email</th>
+            
+
+          </tr>
+        </thead>
+        <tbody>
+          {% for data in dustbin_driver_view %}
+           <tr>
+           {% if data.building_category == '100' %}
+           <td>Office</td>
+           {% else %}
+           <td> House </td>
+          {% endif %}
+           <td>{{ data.address }}</td>
+           <td>{{ data.muncipality }}</td>
+           <td>{{ data.contact_no }}</td>
+           <td>{{ data.login_id.email }}</td>
+         
+           </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

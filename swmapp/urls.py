@@ -53,5 +53,14 @@ urlpatterns = [
     path('complaint_update/<int:id>', views.complaint_update, name='complaint_update'),
     path('complaint_delete/<int:id>', views.complaint_delete, name='complaint_delete'),
     path('reply/<int:id>/', views.reply, name='reply'),
+    path('notifications', views.notifications, name='notifications'),
+    path('notify_muncipality_view', views.notify_muncipality_view, name='notify_muncipality_view'),
+    path('notify_update/<int:id>', views.notify_update, name='notify_update'),
+    path('notify_delete/<int:id>', views.notify_delete, name='notify_delete'),
+    path('notify_user_view', views.notify_user_view, name='notify_user_view'),
+    path('dustbin_harithakarma_view', views.dustbin_harithakarma_view, name='dustbin_harithakarma_view'),
+    path('dustbin_driver_view', views.dustbin_driver_view, name='dustbin_driver_view'),
+    path('wastecollection/<int:id>', views.wastecollection, name='wastecollection'),
+    path('logout', views.logout, name='logout'),
 ]
     

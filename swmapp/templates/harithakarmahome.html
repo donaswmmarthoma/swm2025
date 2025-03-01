@@ -72,26 +72,26 @@
                             <li class="dropdown">
                                 <a href="{% url 'home' %}">Home</a>
                                 <ul>
-                                    {% comment %} <li>
-                                        <a href="index.html">Home One</a>
+                                    <li>
+                                        {% comment %} <a href="index.html">Home One</a> {% endcomment %}
                                     </li>
-                                    <li><a href="index2.html">Home Two</a></li>
-                                    <li><a href="index3.html">Home Three</a></li>
-                                    <li class="dropdown"> {% endcomment %}
-                                        <a href="#">Header Styles</a>
+                                    {% comment %} <li><a href="index2.html">Home Two</a></li>
+                                    <li><a href="index3.html">Home Three</a></li> {% endcomment %}
+                                    <li class="dropdown"> 
+                                        {% comment %} <a href="#">Header Styles</a> {% endcomment %}
                                         <ul>
-                                            <li><a href="index.html">Header One</a></li>
+                                            {% comment %} <li><a href="index.html">Header One</a></li>
                                             <li><a href="index2.html">Header Two</a></li>
-                                            <li><a href="index3.html">Header Three</a></li>
+                                            <li><a href="index3.html">Header Three</a></li> {% endcomment %}
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="about.html">About</a>
+                                <a href="{% url 'about' %}">About</a>
                             </li>
                             <li class="dropdown megamenu">
-                                <a href="services.html">Our Services</a>
+                                <a href="{% url 'services' %}">Our Services</a>
                                 <ul>
                                     <li>
                                         <div class="service-tabs">
@@ -107,7 +107,7 @@
                                                                     <span>Dumpster Rental</span>
                                                                 </li>
                                                                 <li data-tab="#service-3" class="tab-btn">
-                                                                    <span>Portable Toilet</span>
+                                                                    <span></span>
                                                                 </li>
                                                                 <li data-tab="#service-4" class="tab-btn">
                                                                     <span>Recylcing Services</span>
@@ -131,12 +131,12 @@
                                                                                     Waste
                                                                                     & Recycling
                                                                                     Pickup</a></h3>
-                                                                            <a class="service-tabs__btn"
+                                                                            {% comment %} <a class="service-tabs__btn"
                                                                                 href="zero-waste.html">
                                                                                 <i class="fa fa-arrow-right"></i>
                                                                                 View
                                                                                 More
-                                                                            </a>
+                                                                            </a> {% endcomment %}
                                                                             <!-- /.service-tabs__title -->
                                                                         </div><!-- /.service-tabs__text -->
                                                                         <div class="service-tabs__image">
@@ -154,12 +154,12 @@
                                                                                     Rental
                                                                                     & Recycling
                                                                                     Pickup</a></h3>
-                                                                            <a class="service-tabs__btn"
+                                                                            {% comment %} <a class="service-tabs__btn"
                                                                                 href="dumpster-rental.html">
                                                                                 <i class="fa fa-arrow-right"></i>
                                                                                 View
                                                                                 More
-                                                                            </a>
+                                                                            </a> {% endcomment %}
                                                                             <!-- /.service-tabs__title -->
                                                                         </div><!-- /.service-tabs__text -->
                                                                         <div class="service-tabs__image">
@@ -177,12 +177,12 @@
                                                                                     Toilet
                                                                                     & Recycling
                                                                                     Pickup</a></h3>
-                                                                            <a class="service-tabs__btn"
+                                                                            {% comment %} <a class="service-tabs__btn"
                                                                                 href="portable-toilet.html">
                                                                                 <i class="fa fa-arrow-right"></i>
                                                                                 View
                                                                                 More
-                                                                            </a>
+                                                                            </a> {% endcomment %}
                                                                             <!-- /.service-tabs__title -->
                                                                         </div><!-- /.service-tabs__text -->
                                                                         <div class="service-tabs__image">
@@ -200,12 +200,12 @@
                                                                                     Services
                                                                                     & Recycling
                                                                                     Pickup</a></h3>
-                                                                            <a class="service-tabs__btn"
+                                                                            {% comment %} <a class="service-tabs__btn"
                                                                                 href="recylcing-services.html">
                                                                                 <i class="fa fa-arrow-right"></i>
                                                                                 View
                                                                                 More
-                                                                            </a>
+                                                                            </a> {% endcomment %}
                                                                             <!-- /.service-tabs__title -->
                                                                         </div><!-- /.service-tabs__text -->
                                                                         <div class="service-tabs__image">
@@ -223,12 +223,12 @@
                                                                                     Pickup
                                                                                     & Recycling
                                                                                     Pickup</a></h3>
-                                                                            <a class="service-tabs__btn"
+                                                                            {% comment %} <a class="service-tabs__btn"
                                                                                 href="residential-pickup.html">
                                                                                 <i class="fa fa-arrow-right"></i>
                                                                                 View
                                                                                 More
-                                                                            </a>
+                                                                            </a> {% endcomment %}
                                                                             <!-- /.service-tabs__title -->
                                                                         </div><!-- /.service-tabs__text -->
                                                                         <div class="service-tabs__image">
@@ -246,12 +246,12 @@
                                                                                     Waste
                                                                                     & Recycling
                                                                                     Pickup</a></h3>
-                                                                            <a class="service-tabs__btn"
+                                                                            {% comment %} <a class="service-tabs__btn"
                                                                                 href="business-pickup.html">
                                                                                 <i class="fa fa-arrow-right"></i>
                                                                                 View
                                                                                 More
-                                                                            </a>
+                                                                            </a> {% endcomment %}
                                                                             <!-- /.service-tabs__title -->
                                                                         </div><!-- /.service-tabs__text -->
                                                                         <div class="service-tabs__image">
@@ -270,20 +270,20 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#">Industries</a>
+                                {% comment %} <a href="#">Industries</a> {% endcomment %}
                                 <ul>
-                                    <li><a href="industries.html">Industries</a></li>
+                                    {% comment %} <li><a href="industries.html">Industries</a></li>
                                     <li><a href="industries-carousel.html">Industries Carousel</a></li>
-                                    <li><a href="industry-details.html">Industry Details</a></li>
+                                    <li><a href="industry-details.html">Industry Details</a></li> {% endcomment %}
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#">Pages</a>
+                                <a href="#">Dustbins</a>
                                 <ul>
                                     <li><a href="{% url 'dustbin_harithakarma_search' %}">Municipality Dustbins</a></li>
 
-                                    <li><a href="projects-carousel.html">Projects Carousel</a></li>
-                                    <li><a href="project-details.html">Project Details</a></li>
+                                    <li><a href="{% url 'dustbin_harithakarma_view' %}">Private Dustbins</a></li>
+                                    {% comment %} <li><a href="project-details.html">Project Details</a></li>
                                     <li><a href="pricing.html">Pricing</a></li>
                                     <li><a href="request-pickup.html">Request A Pickup</a></li>
                                     <li><a href="staff.html">Staff</a></li>
@@ -293,20 +293,20 @@
                                     <li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
                                     <li><a href="gallery.html">Gallery</a></li>
                                     <li><a href="faq.html">FAQs</a></li>
-                                    <li><a href="404.html">404 Error</a></li>
+                                    <li><a href="404.html">404 Error</a></li> {% endcomment %}
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#">News</a>
                                 <ul>
                                     <li><a href="{% url 'harithakarma_update' %}">Profile</a></li>
-                                    <li><a href="news-carousel.html">News Carousel</a></li>
+                                    {% comment %} <li><a href="news-carousel.html">News Carousel</a></li>
                                     <li><a href="news-sidebar.html">News Sidebar Right</a></li>
                                     <li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
-                                    <li><a href="news-details.html">News Details</a></li>
+                                    <li><a href="news-details.html">News Details</a></li> {% endcomment %}
                                 </ul>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="{% url 'logout' %}">Log out</a></li>
                         </ul>
                     </div>
                     <div class="main-menu-three__right">
@@ -319,7 +319,7 @@
                             </div>
                             <div class="main-menu-three__call-number">
                                 <p>Have Waste/Pickup?</p>
-                                <h5><a href="tel:12463330088">+ 1- (246) 333-0088</a></h5>
+                                <h5><a href="tel:12463330088">8281234567</a></h5>
                             </div>
                         </div>
                     </div>
@@ -362,8 +362,8 @@
                             <div class="row">
                                 <div class="col-xl-7">
                                     <div class="main-slider__content">
-                                        <h2>Reliable <br> & Affordable <br> Waste Services</h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
+                                        <h2>Reuse, recycle,  <br> and reduce the waste  <span>for a better future.</span> </h2>
+                                        {% comment %} <a href="request-pickup.html" class="thm-btn">Request a Pickup</a> {% endcomment %}
                                     </div>
                                 </div>
                             </div>
@@ -379,113 +379,90 @@
         <!--Main Slider End-->
 
         <!--Services Two Start-->
-        <section class="services-two">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="section-title__tagline">What We’re Offering</span>
-                    <h2 class="section-title__title">The Services We’re Providing</h2>
+        <section class="industries-one industries-two">
+            <div class="industries-one-bg"
+                    style="background-image: url({% static 'usertemplate/assets/images/backgrounds/industries-one-bg.jpg'%});"></div>
+            <div class="industries-two__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-7">
+                            <div class="industries-two__top-left">
+                                <div class="section-title text-left">
+                                    <span class="section-title__tagline">We Cover Industries</span>
+                                    <h2 class="section-title__title">Industries We Served</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5">
+                            <div class="industries-two__top-right">
+                                <p class="industries-two__top-text">Our solid waste management services cater to a wide range of industries, ensuring that waste is handled efficiently, sustainably, and in compliance with regulations. We provide tailored solutions for</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <!--Services Two Single-->
-                        <div class="services-two__single">
-                            <div class="services-two__content-box">
-                                <div class="services-two__content-bg-box">
-                                    <div class="services-two__content-bg"
-                                        style="background-image: url({% static 'usertemplate/assets/images/backgrounds/services-two-content-bg.jpg'%});">
-                                    </div>
-                                </div>
-                                <div class="services-two__icon">
-                                    <img src="{% static 'usertemplate/assets/images/icon/services-2-icon-1.png'%}" alt="">
-                                </div>
-                                <div class="services-two__content">
-                                    <h3 class="services-two__title"><a href="zero-waste.html">Zero Waste</a></h3>
-                                    <p class="services-two__text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                </div>
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+                        <!--Industries One Single-->
+                        <div class="industries-one__single">
+                            <div class="industries-one__img">
+                                <img src="{% static 'usertemplate/assets/images/resources/hotel.jpg'%}" alt="">
                             </div>
-                            <div class="services-two__read-more">
-                                <a href="zero-waste.html">
-                                    <span>Read More</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
+                            <div class="industries-one__content">
+                                <div class="industries-one__icon">
+                                    <span class="icon-shop"></span>
+                                </div>
+                                <h3 class="industries-one__title"><a href="industry-details.html">Hotel & Restaurant</a>
+                                </h3>
+                                <p class="industries-one__text">Helping retailers, hotels, and restaurants manage packaging waste, food scraps, and other materials through recycling programs and waste reduction strategies.</p>
+                                {% comment %} <div class="industries-one__arrow">
+                                    <a href="industry-details.html">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div> {% endcomment %}
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
-                        <!--Services Two Single-->
-                        <div class="services-two__single mart-30">
-                            <div class="services-two__content-box">
-                                <div class="services-two__content-bg-box">
-                                    <div class="services-two__content-bg"
-                                        style="background-image: url({% static 'usertemplate/assets/images/backgrounds/services-two-content-bg.jpg'%});">
-                                    </div>
-                                </div>
-                                <div class="services-two__icon">
-                                    <img src="{% static 'usertemplate/assets/images/icon/services-2-icon-2.png'%}" alt="">
-                                </div>
-                                <div class="services-two__content">
-                                    <h3 class="services-two__title"><a href="dumpster-rental.html">Dumpster Rental
-                                        </a></h3>
-                                    <p class="services-two__text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                </div>
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+                        <!--Industries One Single-->
+                        <div class="industries-one__single">
+                            <div class="industries-one__img">
+                                <img src="{% static 'usertemplate/assets/images/resources/industries-1-2.jpg'%}" alt="">
                             </div>
-                            <div class="services-two__read-more">
-                                <a href="dumpster-rental.html">
-                                    <span>Read More</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
+                            <div class="industries-one__content">
+                                <div class="industries-one__icon">
+                                    <span class="icon-stethoscope"></span>
+                                </div>
+                                <h3 class="industries-one__title"><a href="industry-details.html">Medical & Hospital</a>
+                                </h3>
+                                <p class="industries-one__text">Offering specialized solutions for the disposal and treatment of hazardous medical waste, including sharps, biohazardous materials, and pharmaceuticals..</p>
+                                {% comment %} <div class="industries-one__arrow">
+                                    <a href="industry-details.html">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div> {% endcomment %}
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                        <!--Services Two Single-->
-                        <div class="services-two__single">
-                            <div class="services-two__content-box">
-                                <div class="services-two__content-bg-box">
-                                    <div class="services-two__content-bg"
-                                        style="background-image: url({% static 'usertemplate/assets/images/backgrounds/services-two-content-bg.jpg'%});">
-                                    </div>
-                                </div>
-                                <div class="services-two__icon">
-                                    <img src="{% static 'usertemplate/assets/images/icon/services-2-icon-3.png'%}" alt="">
-                                </div>
-                                <div class="services-two__content">
-                                    <h3 class="services-two__title"><a href="portable-toilet.html">Portable Toilet</a>
-                                    </h3>
-                                    <p class="services-two__text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                </div>
+                    <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <!--Industries One Single-->
+                        <div class="industries-one__single">
+                            <div class="industries-one__img">
+                                <img src="{% static 'usertemplate/assets/images/resources/industriesdownload.jpg'%}" alt="">
                             </div>
-                            <div class="services-two__read-more">
-                                <a href="portable-toilet.html">
-                                    <span>Read More</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                        <!--Services Two Single-->
-                        <div class="services-two__single mart-30">
-                            <div class="services-two__content-box">
-                                <div class="services-two__content-bg-box">
-                                    <div class="services-two__content-bg"
-                                        style="background-image: url({% static 'usertemplate/assets/images/backgrounds/services-two-content-bg.jpg'%});">
-                                    </div>
+                            <div class="industries-one__content">
+                                <div class="industries-one__icon">
+                                    <span class="icon-grocery"></span>
                                 </div>
-                                <div class="services-two__icon">
-                                    <img src="{% static 'usertemplate/assets/images/icon/services-2-icon-4.png'%}" alt="">
+                                <h3 class="industries-one__title"><a href="industry-details.html">Manufacturing</a>
+                                </h3>
+                                <p class="industries-one__text">Managing industrial waste such as plastics, metals, and chemicals to ensure safe disposal and recycling, promoting sustainability in manufacturing processes.</p>
+                                <div class="industries-one__arrow">
+                                    {% comment %} <a href="industry-details.html">
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a> {% endcomment %}
                                 </div>
-                                <div class="services-two__content">
-                                    <h3 class="services-two__title"><a href="recylcing-services.html">Recycling
-                                            Service</a></h3>
-                                    <p class="services-two__text">Lorem ipsum dolor sit amet, adipelit do.</p>
-                                </div>
-                            </div>
-                            <div class="services-two__read-more">
-                                <a href="recylcing-services.html">
-                                    <span>Read More</span>
-                                    <i class="fa fa-arrow-right"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -514,13 +491,11 @@
                     <div class="col-xl-6">
                         <div class="welcome__right">
                             <div class="section-title text-left">
-                                <span class="section-title__tagline">Welcome to Waste Pickup Company</span>
+                                <span class="section-title__tagline">Welcome to Wostin</span>
                                 <h2 class="section-title__title">We’ve Been Working Since 1987 in this Field</h2>
                             </div>
-                            <p class="welcome__text-1">Aenean sed sapien venenatis, blandit nulla in, lacinia risus.
-                                Suspendisse potenti.</p>
-                            <p class="welcome__text-2">There are many variations of passages of psum available, but the
-                                majority have suffered alteration in some form, by injected humour, or randomised words.
+                            <p class="welcome__text-1">At Wostin, we are committed to creating a cleaner, greener future for our communities. We offer a comprehensive range of solid waste management services designed to promote sustainability and reduce environmental impact..</p>
+                            <p class="welcome__text-2">
                             </p>
                             <ul class="list-unstyled welcome__bottom">
                                 <li>
@@ -544,7 +519,7 @@
         <!--Welcome End-->
 
         <!--Why Choose Two Start-->
-        <section class="why-choose-two">
+        {% comment %} <section class="why-choose-two">
             <div class="why-choose-two-bg"
                 style="background-image: url({% static 'usertemplate/assets/images/backgrounds/why-choose-two-bg.jpg'%});"></div>
             <div class="container">
@@ -607,7 +582,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!--Why Choose Two End-->
 
         <!--Manage Waste Two Start-->
@@ -648,9 +623,7 @@
                         </div>
                         <div class="col-xl-5 col-lg-5">
                             <div class="project-three__right">
-                                <p class="project-three__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. quis nostrud
-                                    exercitation ullamco laboris.</p>
+                                <p class="project-three__text">At Wostin, we are committed to creating a cleaner, greener future for our communities. We offer a comprehensive range of solid waste management services designed to promote sustainability and reduce environmental impact..</p>
                             </div>
                         </div>
                     </div>
@@ -712,7 +685,7 @@
         <!--Project Three End-->
 
         <!--Pricing Start-->
-        <section class="pricing">
+        {% comment %} <section class="pricing">
             <div class="container">
                 <div class="section-title text-center">
                     <span class="section-title__tagline">Our Pricing Plans</span>
@@ -939,11 +912,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!--Pricing End-->
 
         <!--Testimonial Three Start-->
-        <section class="testimonial-three">
+        {% comment %} <section class="testimonial-three">
             <div class="testimonial-three-bg"
                 style="background-image: url({% static 'usertemplate/assets/images/backgrounds/testimonial-three-bg.jpg'%});"></div>
             <div class="testimonial-three-bg-2"
@@ -1073,11 +1046,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!--Testimonial Three End-->
 
         <!--Team One Start-->
-        <section class="team-one">
+        {% comment %} <section class="team-one">
             <div class="container">
                 <div class="section-title text-center">
                     <span class="section-title__tagline">Team Behind Success</span>
@@ -1164,7 +1137,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!--Team One End-->
 
         <!--Working Process Start-->
@@ -1192,7 +1165,7 @@
                             </div>
                         </div>
                         <h3 class="working-process__title"><a href="about.html">Pickup</a></h3>
-                        <p class="working-process__text">Lorem Ipsum is simply text of the new design print and type.
+                        <p class="working-process__text"> we offer a wide range of convenient and reliable waste pickup services to meet the needs of our residential, commercial, and industrial customers. We make it easy to manage your waste responsibly and efficiently with the pickups.
                         </p>
                     </li>
                     <li class="working-process__single">
@@ -1212,7 +1185,7 @@
                             </div>
                         </div>
                         <h3 class="working-process__title"><a href="about.html">Collection</a></h3>
-                        <p class="working-process__text">Lorem Ipsum is simply text of the new design print and type.
+                        <p class="working-process__text"> we provide reliable and efficient waste collection services designed to keep your home, business, and community clean. Our comprehensive collection services are tailored to meet your specific needs, ensuring waste is handled responsibly and sustainably
                         </p>
                     </li>
                     <li class="working-process__single">
@@ -1232,7 +1205,7 @@
                             </div>
                         </div>
                         <h3 class="working-process__title"><a href="about.html">Proccessing</a></h3>
-                        <p class="working-process__text">Lorem Ipsum is simply text of the new design print and type.
+                        <p class="working-process__text"> we go beyond collection to ensure that waste is processed in an environmentally responsible way. Our state-of-the-art processing services help divert waste from landfills, reduce pollution, and promote sustainability. 
                         </p>
                     </li>
                     <li class="working-process__single">
@@ -1252,7 +1225,7 @@
                             </div>
                         </div>
                         <h3 class="working-process__title"><a href="about.html">Disposed</a></h3>
-                        <p class="working-process__text">Lorem Ipsum is simply text of the new design print and type.
+                        <p class="working-process__text"> we provide safe, efficient, and environmentally responsible waste disposal services to ensure that waste is handled properly, reducing its impact on the environment. Our goal is to minimize landfill waste and promote sustainable practices throughout the disposal process. 
                         </p>
                     </li>
                 </ul>
@@ -1261,7 +1234,7 @@
         <!--Working Process End-->
 
         <!--News Three Start-->
-        <section class="news-three">
+        {% comment %} <section class="news-three">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-4">
@@ -1456,7 +1429,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> {% endcomment %}
         <!--Brand One End-->
 
         <!--Site Footer Start-->
@@ -1488,8 +1461,7 @@
                             <div class="footer-widget__column footer-widget__about">
                                 <h3 class="footer-widget__title">About</h3>
                                 <div class="footer-widget__about-text-box">
-                                    <p class="footer-widget__about-text">Lorem ipsum dolor sited ame etur adi pisicing
-                                        elit tempor labore.</p>
+                                    <p class="footer-widget__about-text"> we provide safe, efficient, and environmentally responsible waste disposal services to ensure that waste is handled properly, reducing its impact on the environment. Our goal is to minimize landfill waste and promote sustainable practices throughout the disposal process. </p>
                                 </div>
                                 <form class="footer-widget__newsletter-form">
                                     <div class="footer-widget__newsletter-input-box">
@@ -1504,11 +1476,11 @@
                             <div class="footer-widget__column footer-widget__links clearfix">
                                 <h3 class="footer-widget__title">Links</h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="request-pickup.html">Request Pickup</a></li>
-                                    <li><a href="about.html">Management</a></li>
-                                    <li><a href="services.html">Start Service</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="">Request Pickup</a></li>
+                                    <li><a href="{% url 'about' %}">Management</a></li>
+                                    <li><a href="{% url 'services' %}">Start Service</a></li>
+                                    <li><a href="">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1516,18 +1488,18 @@
                             <div class="footer-widget__column footer-widget__services clearfix">
                                 <h3 class="footer-widget__title">Services</h3>
                                 <ul class="footer-widget__services-list list-unstyled clearfix">
-                                    <li><a href="dumpster-rental.html">Dumpster Rentals</a></li>
-                                    <li><a href="about.html">Bulk Trash Pickup</a></li>
-                                    <li><a href="about.html">Waste Removal</a></li>
-                                    <li><a href="zero-waste.html">Zero Waste</a></li>
+                                    <li><a href="">Dumpster Rentals</a></li>
+                                    <li><a href="">Bulk Trash Pickup</a></li>
+                                    <li><a href="">Waste Removal</a></li>
+                                    <li><a href="">Zero Waste</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                             <div class="footer-widget__column footer-widget__contact clearfix">
                                 <h3 class="footer-widget__title">Contact</h3>
-                                <p class="footer-widget__contact-text">880 Broklyn Road Street, New Town DC 5002, New
-                                    York. USA</p>
+                                <p class="footer-widget__contact-text">
+                                    New Delhi,India</p>
                                 <div class="footer-widget__contact-info">
                                     <div class="footer-widget__contact-icon">
                                         <span class="icon-contact"></span>

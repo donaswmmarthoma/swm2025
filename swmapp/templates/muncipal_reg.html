@@ -8,8 +8,36 @@
         <!-- <h1>Registration Form</h1> -->
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p}}
-            {{ loginform.as_p }}
+            <table align="center">
+            <tr>
+                <td><label>Name:</label></td>
+                <td>{{form.muncipality_name}}</td>
+            </tr>
+            <tr>
+                <td><label>Address:</label></td>
+                <td>{{form.address}}</td>
+            </tr>
+            <tr>
+                <td><label>City:</label></td>
+                <td>{{form.city}}</td>
+            </tr>
+            <tr>
+                <td><label>Thaluk:</label></td>
+                <td>{{form.thaluk}}</td>
+            </tr>
+            <tr>
+                <td><label>Contact Number:</label></td>
+                <td>{{form.contact_no}}</td>
+            </tr>
+            <tr>
+                <td><label>Email:</label></td>
+                <td>{{loginform.email}}</td>
+            </tr>
+            <tr>
+                <td><label>Password:</label></td>
+                <td>{{loginform.password}}</td>
+            </tr>
+        </table>
             <button class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
     </body>

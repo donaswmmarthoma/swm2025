@@ -1,0 +1,30 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<html>
+<head>
+    <title>Notifications</title>
+</head>
+<body align="center">
+    <h1> Notifications !!!</h1>
+    <table class="table table-striped" align="center">
+        <thead>
+            <tr>
+                <th>Notifications</th>
+                <th>Issued Date</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+          {% for data in notify_user_view %}
+            <tr>
+                <td>{{ data.notifications }}</td>
+                <td>{{ data.date }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>  
+{% endblock %}
+

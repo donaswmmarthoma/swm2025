@@ -654,26 +654,118 @@ def complaint_user_view(request):
     return render(request, 'complaint_user_view.html', {'complaint_user_view': complaintdata})
 
 
-def reply(request, id):
-    id = request.session.get('publicid') 
+def reply(request,id):
     data = get_object_or_404(Complaints,id=id)  
-    #print(data) 
+    print(data) 
+    print(id)
     
     if request.method == 'POST':
-        form = ReplyForm(request.POST)
+        rply = request.POST.get('reply')
+        data.reply = rply
+        data.save()
+        return redirect('muncipality_home')
+    # else:
+        
+        
+    return render(request, 'reply.html')
+
+    
+
+def notifications(request):
+    id = request.session.get('muncipalityid')
+    data = get_object_or_404(MuncipalityReg, login_id=id)  
+    print(data)
+    
+    if request.method == 'POST':
+        form = NotificationForm(request.POST)
         if form.is_valid():
-            reply = form.save(commit=False)
-            reply.loginid = data  
-            reply.save()
-            return redirect('muncipalityhome')
+            notify = form.save(commit=False)  
+            notify.login_id= data 
+            notify.save() 
+            return redirect('muncipality_home')
     else:
-        form = ReplyForm()
+        form = NotificationForm()
     
-    return render(request, 'reply.html', {'form': form})
+    return render(request, 'notifications.html', {'form': form}) 
+
+def notify_muncipality_view(request):
+    login_id = request.session.get('muncipalityid')
+    data = get_object_or_404(MuncipalityReg,login_id=login_id)
+    notifydata = Notifications.objects.filter(login_id=data)
+    return render(request, 'notify_muncipality_view.html', {'notify_muncipality_view':notifydata})
+    
+def notify_update(request, id):
+    data = get_object_or_404(Notifications, id=id)
+    
+    if request.method == 'POST':
+        updateform = NotificationForm(request.POST, instance=data)
+        
+        if updateform.is_valid():
+            updateform.save()
+            return redirect('notify_muncipality_view')  
+    else:
+        updateform = NotificationForm(instance=data) 
+    
+    return render(request, 'notify_update.html', {'updateform': updateform})
+
+def notify_delete(request, id):
+    data = get_object_or_404(Notifications,id=id)
+    data.delete()
+    return redirect('notify_muncipality_view')
+
+
+def notify_user_view(request):
+    login_id = request.session.get('muncipalityid')
+  
+    # data = get_object_or_404(MuncipalityReg, login_id=login_id)
+    notifydata = Notifications.objects.all()
+    
+    return render(request, 'notify_user_view.html', {'notify_user_view': notifydata})
+
+
+def dustbin_harithakarma_view(request):
+   
+    login_id = request.session.get('publicid')
+    
 
     
+    try:
+        data = DustbinReg.objects.all()
+        print(data)
+        # publicdata = PublicReg.objects.filter(login_id_id=login_id)
 
+        return render(request, 'dustbin_harithakarma_view.html', {'dustbin_harithakarma_view': data})
+    except DustbinReg.DoesNotExist:
+        return render(request, 'dustbin_harithakarma_view.html', {'error': 'user not found.'})
+
+
+def dustbin_driver_view(request):
+   
+    login_id = request.session.get('publicid')
     
+    try:
+        data = DustbinReg.objects.all()
+        print(data)
+        # publicdata = PublicReg.objects.filter(login_id_id=login_id)
+
+        return render(request, 'dustbin_driver_view.html', {'dustbin_driver_view': data})
+    except DustbinReg.DoesNotExist:
+        return render(request, 'dustbin_driver_view.html', {'error': 'user not found.'})
+
+def wastecollection(request,id):
+    dustbin = get_object_or_404(DustbinReg,id=id)
+    log_id = request.session.get('harithakarmaid')
+    haritha_id = get_object_or_404(HarithakarmaReg,login_id = log_id)
+    WasteCollection.objects.create(
+        dustbin_id = dustbin,
+        harithakarma_id = haritha_id
+        )
+    return redirect('dustbin_harithakarma_view')
+def logout(request):
+    request.session.flush()
+    return redirect('/')    
+    
+  
 
 
 
