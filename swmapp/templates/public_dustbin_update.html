@@ -1,4 +1,4 @@
-{% extends 'header.html' %}
+{% extends 'muncipal_header.html' %}
 {% block content %}
 <html>
     <head>
@@ -8,7 +8,17 @@
         <h1>Update Dustbin Details!</h1>
         <form method="post">
             {% csrf_token %}
-            {{ updateform.as_p}}
+            <table align="center">
+                <tr>
+                    <td><label>Dustbin ID:</label></td>
+                    <td>{{updateform.dustbin_id}}</td>
+                </tr>
+                <tr>
+                    <td><label>Location:</label></td>
+                    <td>{{updateform.location}}</td>
+                </tr>
+               
+            </table>
             {% comment %} {{ logform.as_p}} {% endcomment %}
             <button  class="thm-btn contact-one__btn"  type="submit">Update</button>
         </form>

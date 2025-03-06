@@ -760,7 +760,20 @@ def wastecollection(request,id):
         dustbin_id = dustbin,
         harithakarma_id = haritha_id
         )
+    dustbin.collection_status = 1
+    dustbin.save()
     return redirect('dustbin_harithakarma_view')
+
+
+
+def muncipality_waste_view(request):
+    login_id = request.session.get('muncipalityid')
+    
+ 
+    data = WasteCollection.objects.all()
+    
+    return render(request, 'muncipality_waste_view.html', {'muncipality_waste_view': data})
+    
 def logout(request):
     request.session.flush()
     return redirect('/')    

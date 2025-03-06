@@ -1,0 +1,32 @@
+{% extends 'muncipal_header.html' %}
+{% block content %}
+<html>
+<head>
+    <title>Muncipality Waste View</title>
+</head>
+<body align="center">
+    <h1>Bins Collected by Harithakarma</h1>
+    <table class="table table-striped" align="center">
+        <tr>
+            <th>Dustbin ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Collected Haithakarma</th>
+       </tr>
+        </thead>
+        <tbody>
+          {% for data in  muncipality_waste_view %}
+           <tr>
+         
+           <td>{{ data.dustbin_id.address }}</td>
+           <td>{{ data.date }}</td>
+           <td>{{ data.time }}</td>
+           <td>{{ data.harithakarma_id.harithakarma_id }}</td>
+         
+           </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}

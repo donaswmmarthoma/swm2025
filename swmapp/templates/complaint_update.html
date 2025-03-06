@@ -1,4 +1,4 @@
-{% extends 'header.html' %}
+{% extends 'user_header.html' %}
 {% block content %}
 <html>
     <head>
@@ -6,9 +6,14 @@
     </head>
     <body align="center">
         <h1>Update your Complaint!</h1>
+        <table align="center">
         <form method="post">
             {% csrf_token %}
-            {{ updateform.as_p}}
+            <tr>
+                <td><label>Complaint:</label></td>
+                <td>{{updateform.complaints}}</td>
+            </tr>
+        </table>
             <button  class="thm-btn contact-one__btn" type="submit">Update</button>
         </form>
     </body>

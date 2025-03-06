@@ -51,6 +51,8 @@ class DustbinReg(models.Model):
     login_id = models.ForeignKey(LoginTable,on_delete=models.CASCADE,related_name='public') 
     date =  models.DateField(auto_now_add=True)
     status = models.IntegerField(default=0)
+    collection_status = models.IntegerField(default=0)
+
 
 class Payment(models.Model):
     card_no = models.IntegerField()

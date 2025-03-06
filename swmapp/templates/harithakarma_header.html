@@ -1,0 +1,343 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from pixydrops.com/wostin/main-html/gallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jan 2025 09:14:42 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Wostin </title>
+    <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'usertemplate/assets/images/favicons/apple-touch-icon.png'%}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'usertemplate/assets/images/favicons/favicon-32x32.png'%}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'usertemplate/assets/images/favicons/favicon-16x16.png'%}" />
+    <link rel="manifest" href="{% static 'usertemplate/assets/images/favicons/site.webmanifest'%}" />
+    <meta name="description" content="Wostin HTML Template For Business" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/animate/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/animate/custom-animate.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/fontawesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/jarallax/jarallax.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/nouislider/nouislider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/nouislider/nouislider.pips.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/odometer/odometer.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/swiper/swiper.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/wostin-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/tiny-slider/tiny-slider.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/reey-font/stylesheet.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/owl-carousel/owl.theme.default.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/bxslider/jquery.bxslider.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/bootstrap-select/css/bootstrap-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/vegas/vegas.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/jquery-ui/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/vendors/timepicker/timePicker.css' %}" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/css/wostin.css' %}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/css/wostin-responsive.css' %}" />
+</head>
+
+<body>
+    <!-- <div class="preloader">
+        <img class="preloader__image" width="60" src="{% static 'usertemplate/assets/images/loader.png' %}" alt="" />
+    </div> -->
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+        <header class="main-header clearfix">
+            <div class="main-header__inner clearfix">
+                <div class="main-header__logo">
+                    <a href=""><img src="{% static 'usertemplate/assets/images/resources/logo-1.png' %}" alt=""></a>
+                </div>
+                <div class="main-menu__menu-box">
+                    <div class="main-menu__menu-top">
+                        <div class="main-menu__menu-top-left">
+                            <p class="main-menu__menu-top-text">Welcome To Waste Disposal & Pickup Services.</p>
+                            <div class="main-menu__menu-top-btn-box">
+                                {% comment %} <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
+                                    Pickup</a> {% endcomment %}
+                            </div>
+                        </div>
+                        <div class="main-menu__menu-top-right">
+                            <ul class="list-unstyled main-menu__menu-top-address">
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-email"></span>
+                                    </div>
+                                    <div class="text">
+                                        {% comment %} <p><a href="mailto:needhelp@company.com"></a></p> {% endcomment %}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <span class="icon-clock"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p></p>
+                                    </div>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main-menu__menu-bottom">
+                        <nav class="main-menu clearfix">
+                            <div class="main-menu__main-menu-box">
+                                <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                                <ul class="main-menu__list">
+                                    <li class="dropdown">
+                                        <a href="{% url 'harithakarma_home' %}">Home</a>
+                                        <ul>
+                                            <li>
+                                                {% comment %} <a href="index.html">Home One</a> {% endcomment %}
+                                            </li>
+                                            {% comment %} <li><a href="index2.html">Home Two</a></li>
+                                            <li><a href="index3.html">Home Three</a></li> {% endcomment %}
+                                            <li class="dropdown">
+                                                {% comment %} <a href="#">Header Styles</a> {% endcomment %}
+                                                <ul>
+                                                    {% comment %} <li><a href="index.html">Header One</a></li>
+                                                    <li><a href="index2.html">Header Two</a></li>
+                                                    <li><a href="index3.html">Header Three</a></li> {% endcomment %}
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    {% comment %} <li>
+                                        <a href="{% url 'about' %}">About</a>
+                                    </li> {% endcomment %}
+                                    <li class="dropdown">
+                                        <a href="#">Dustbins</a>
+                                        <ul>
+                                            <li><a href="{% url 'dustbin_harithakarma_search' %}">Municipality Dustbins</a></li>
+        
+                                            <li><a href="{% url 'dustbin_harithakarma_view' %}">Private Dustbins</a></li>
+                                            {% comment %} <li><a href="project-details.html">Project Details</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                            <li><a href="request-pickup.html">Request A Pickup</a></li>
+                                            <li><a href="staff.html">Staff</a></li>
+                                            <li><a href="staff-carousel.html">Staff Carousel</a></li>
+                                            <li><a href="staff-details.html">Staff Details</a></li>
+                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                            <li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                            <li><a href="faq.html">FAQs</a></li>
+                                            <li><a href="404.html">404 Error</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="{% url 'harithakarma_update' %}">Profile</a>
+                                        <ul>
+                                            {% comment %} <li><a href="{% url 'harithakarma_update' %}">Profile</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="news-carousel.html">News Carousel</a></li>
+                                            <li><a href="news-sidebar.html">News Sidebar Right</a></li>
+                                            <li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
+                                            <li><a href="news-details.html">News Details</a></li> {% endcomment %}
+                                        </ul>
+                                    </li>
+                                   
+                                
+                            
+                                    <li class="dropdown">
+                                        {% comment %} <a href="{% url 'logout' %}">Log out</a> {% endcomment %}
+										{% comment %} <a href="#">Industries</a> {% endcomment %}
+										<ul>
+											{% comment %} <li><a href="industries.html">Industries</a></li>
+											<li><a href="industries-carousel.html">Industries Carousel</a></li>
+											<li><a href="industry-details.html">Industry Details</a></li> {% endcomment %}
+										</ul>
+									</li>
+                                    <li class="dropdown">
+										{% comment %} <a href="#">Pages</a> {% endcomment %}
+										<ul>
+											{% comment %} <li><a href="projects.html">Projects</a></li>
+											<li><a href="projects-carousel.html">Projects Carousel</a></li>
+											<li><a href="project-details.html">Project Details</a></li>
+											<li><a href="pricing.html">Pricing</a></li>
+											<li><a href="request-pickup.html">Request A Pickup</a></li>
+											<li><a href="staff.html">Staff</a></li>
+											<li><a href="staff-carousel.html">Staff Carousel</a></li>
+											<li><a href="staff-details.html">Staff Details</a></li>
+											<li><a href="testimonials.html">Testimonials</a></li>
+											<li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
+											<li><a href="gallery.html">Gallery</a></li>
+											<li><a href="faq.html">FAQs</a></li>
+											<li><a href="404.html">404 Error</a></li> {% endcomment %}
+										</ul>
+									</li>
+                                    <li class="dropdown">
+										{% comment %} <a href="#">News</a> {% endcomment %}
+										<ul>
+											{% comment %} <li><a href="news.html">News</a></li>
+											<li><a href="news-carousel.html">News Carousel</a></li>
+											<li><a href="news-sidebar.html">News Sidebar Right</a></li>
+											<li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
+											<li><a href="news-details.html">News Details</a></li> {% endcomment %}
+										</ul>
+                                        
+									</li>
+                                    <div class="main-menu-two__btn-box">
+                                        <li> <a href="{% url 'logout' %}" class="btn btn-secondary">Log out</a></li>
+                                     </div>
+                                </ul>
+                                
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="main-header__right">
+                    <div class="main-header__right__call-icon">
+                        <span class="icon-phone-ringing"></span>
+                    </div>
+                    <div class="main-header__right-call-number">
+                        <p>Have Waste/Pickup?</p>
+                        <h5><a href="tel:12463330088">8281234567</a></h5>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+        </div><!-- /.stricky-header -->
+
+
+          <!--Page Header Start-->
+          <section class="page-header">
+            <div class="page-header-bg" style="background-image: url({% static 'usertemplate/assets/images/backgrounds/banner3.jpg' %})">
+            </div>
+            <div class="container">
+                <div class="page-header__inner">
+                    {% comment %} <h2>Register now</h2> {% endcomment %}
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{% url 'haritharma_home' %}">Home</a></li>
+                        {% comment %} <li>Services</li> {% endcomment %}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--Page Header End-->
+        <br>
+        <br>
+
+        {% block content %}
+
+        {% endblock %}
+        <br>
+        <br>
+
+  <!--Site Footer Start-->
+        <footer class="site-footer">
+            <div class="site-footer-bg" style="background-image: url(assets/images/backgrounds/site-footer-bg.jpg'%});">
+            </div>
+            <div class="site-footer__top">
+                <div class="container">
+                    <div class="site-footer__top-inner">
+                        <div class="site-footer__top-logo">
+                            <a href="index.html"><img src="{% static 'usertemplate/assets/images/resources/footer-logo.png'%}" alt=""></a>
+                        </div>
+                        <div class="site-footer__top-right">
+                            <p class="site-footer__top-right-text">Waste Disposal Management & Pickup Services</p>
+                            <div class="site-footer__social">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="footer-widget__column footer-widget__about">
+                                <h3 class="footer-widget__title">About</h3>
+                                <div class="footer-widget__about-text-box">
+                                    <p class="footer-widget__about-text"> we provide safe, efficient, and environmentally responsible waste disposal services to ensure that waste is handled properly, reducing its impact on the environment. Our goal is to minimize landfill waste and promote sustainable practices throughout the disposal process. </p>
+                                </div>
+                                <form class="footer-widget__newsletter-form">
+                                    <div class="footer-widget__newsletter-input-box">
+                                        <input type="email" placeholder="Email Address" name="email">
+                                        <button type="submit" class="footer-widget__newsletter-btn"><i
+                                                class="far fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="footer-widget__column footer-widget__links clearfix">
+                                <h3 class="footer-widget__title">Links</h3>
+                                <ul class="footer-widget__links-list list-unstyled clearfix">
+                                    <li><a href="{% url 'dustbin_harithakarma_search' %}">Municipality Dustbins</a></li>
+
+                                    <li><a href="{% url 'dustbin_harithakarma_view' %}">Private Dustbins</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="footer-widget__column footer-widget__services clearfix">
+                                <h3 class="footer-widget__title">Services</h3>
+                                <ul class="footer-widget__services-list list-unstyled clearfix">
+                                    <li><a href="">Dumpster Rentals</a></li>
+                                    <li><a href="">Bulk Trash Pickup</a></li>
+                                    <li><a href="">Waste Removal</a></li>
+                                    <li><a href="">Zero Waste</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="footer-widget__column footer-widget__contact clearfix">
+                                <h3 class="footer-widget__title">Contact</h3>
+                                <p class="footer-widget__contact-text">
+                                    New Delhi,India</p>
+                                <div class="footer-widget__contact-info">
+                                    <div class="footer-widget__contact-icon">
+                                        <span class="icon-contact"></span>
+                                    </div>
+                                    <div class="footer-widget__contact-content">
+                                        <p class="footer-widget__contact-mail-phone">
+                                            {% comment %} <a href="mailto:needhelp@wostin.com"
+                                                class="footer-widget__contact-mail">needhelp@wostin.com</a> {% endcomment %}
+                                            <a href="tel:2463330088" class="footer-widget__contact-phone">8281234567</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <div class="site-footer-bottom-shape"
+                    style="background-image: url({% static 'usertemplate/assets/images/shapes/site-footer-bottom-shape.png'%});"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="site-footer__bottom-inner">
+                                <p class="site-footer__bottom-text">© Copyright 2022 by <a href="#">Layerdrops.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Site Footer End-->
+

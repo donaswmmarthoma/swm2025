@@ -63,15 +63,15 @@
         <header class="main-header clearfix">
             <div class="main-header__inner clearfix">
                 <div class="main-header__logo">
-                    <a href="index.html"><img src="{% static 'usertemplate/assets/images/resources/logo-1.png' %}" alt=""></a>
+                    <a href=""><img src="{% static 'usertemplate/assets/images/resources/logo-1.png' %}" alt=""></a>
                 </div>
                 <div class="main-menu__menu-box">
                     <div class="main-menu__menu-top">
                         <div class="main-menu__menu-top-left">
                             <p class="main-menu__menu-top-text">Welcome To Waste Disposal & Pickup Services.</p>
                             <div class="main-menu__menu-top-btn-box">
-                                <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
-                                    Pickup</a>
+                                {% comment %} <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
+                                    Pickup</a> {% endcomment %}
                             </div>
                         </div>
                         <div class="main-menu__menu-top-right">
@@ -81,7 +81,7 @@
                                         <span class="icon-email"></span>
                                     </div>
                                     <div class="text">
-                                        <p><a href="mailto:needhelp@company.com">needhelp@wostin.com</a></p>
+                                        {% comment %} <p><a href="mailto:needhelp@company.com"></a></p> {% endcomment %}
                                     </div>
                                 </li>
                                 <li>
@@ -308,7 +308,17 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="{% url 'logout' %}">Log out</a>
+                                        <a href="#">Registrations</a>
+                                        <ul>
+                                            <li><a href="{% url 'muncipal_reg' %}">Muncipality</a></li>
+                                            <li><a href="{% url 'public_reg' %}">Users</a></li>
+                                            <li><a href="{% url 'driver_reg' %}">Garbage Collector Driver</a></li>
+                                            <li><a href="{% url 'harithakarma_reg' %}">Harithakarma Sena</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown">
+                                        {% comment %} <a href="{% url 'logout' %}">Log out</a> {% endcomment %}
 										{% comment %} <a href="#">Industries</a> {% endcomment %}
 										<ul>
 											{% comment %} <li><a href="industries.html">Industries</a></li>
@@ -344,7 +354,9 @@
 											<li><a href="news-details.html">News Details</a></li> {% endcomment %}
 										</ul>
 									</li>
-                                   
+                                    <div class="main-menu-two__btn-box">
+                                <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                            </div> 
                                 </ul>
                             </div>
                         </nav>
@@ -356,7 +368,7 @@
                     </div>
                     <div class="main-header__right-call-number">
                         <p>Have Waste/Pickup?</p>
-                        <h5><a href="tel:12463330088">+ 1- (246) 333-0088</a></h5>
+                        <h5><a href="tel:12463330088">8281234567</a></h5>
                     </div>
                 </div>
             </div>
@@ -375,17 +387,20 @@
                     <h2>Register now</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="{% url 'home' %}">Home</a></li>
-                        <li>Services</li>
+                        {% comment %} <li>Services</li> {% endcomment %}
                     </ul>
                 </div>
             </div>
         </section>
         <!--Page Header End-->
+        <br>
+        <br>
 
         {% block content %}
 
         {% endblock %}
-
+        <br>
+        <br>
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer-bg" style="background-image: url({% static 'usertemplate/assets/images/backgrounds/site-footer-bg.jpg'%});">
@@ -394,7 +409,7 @@
                 <div class="container">
                     <div class="site-footer__top-inner">
                         <div class="site-footer__top-logo">
-                            <a href="index.html"><img src="{% static 'usertemplate/assets/images/resources/footer-logo.png'%}" alt=""></a>
+                            <a href=""><img src="{% static 'usertemplate/assets/images/resources/footer-logo.png'%}" alt=""></a>
                         </div>
                         <div class="site-footer__top-right">
                             <p class="site-footer__top-right-text">Waste Disposal Management & Pickup Services</p>
@@ -431,10 +446,10 @@
                                 <h3 class="footer-widget__title">Links</h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
                                     <li><a href="{% url 'about' %}">About</a></li>
-                                    <li><a href="">Request Pickup</a></li>
+                                    {% comment %} <li><a href="">Request Pickup</a></li> {% endcomment %}
                                     <li><a href="{% url 'about' %}">Management</a></li>
                                     <li><a href="{% url 'services' %}">Start Service</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    {% comment %} <li><a href="">Contact</a></li> {% endcomment %}
                                 </ul>
                             </div>
                         </div>
@@ -442,10 +457,10 @@
                             <div class="footer-widget__column footer-widget__services clearfix">
                                 <h3 class="footer-widget__title">Services</h3>
                                 <ul class="footer-widget__services-list list-unstyled clearfix">
-                                    <li><a href="{% url 'services' %}">Dumpster Rentals</a></li>
-                                    <li><a href="{% url 'services' %}">Bulk Trash Pickup</a></li>
-                                    <li><a href="{% url 'services' %}">Waste Removal</a></li>
-                                    <li><a href="{% url 'services' %}">Zero Waste</a></li>
+                                    <li><a href="">Dumpster Rentals</a></li>
+                                    <li><a href="">Bulk Trash Pickup</a></li>
+                                    <li><a href="">Waste Removal</a></li>
+                                    <li><a href="">Zero Waste</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -460,8 +475,8 @@
                                     </div>
                                     <div class="footer-widget__contact-content">
                                         <p class="footer-widget__contact-mail-phone">
-                                            <a href="mailto:needhelp@wostin.com"
-                                                class="footer-widget__contact-mail">needhelp@wostin.com</a>
+                                            {% comment %} <a href="mailto:needhelp@wostin.com"
+                                                class="footer-widget__contact-mail">needhelp@wostin.com</a> {% endcomment %}
                                             <a href="tel:2463330088" class="footer-widget__contact-phone">8281234567
                                                 </a>
                                         </p>

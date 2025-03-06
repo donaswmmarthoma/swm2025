@@ -55,16 +55,16 @@
 </head>
 
 <body>
-    <div class="preloader">
+    {% comment %} <div class="preloader">
         <img class="preloader__image" width="60" src="{% static 'usertemplate/assets/images/loader.png'%}" alt="" />
-    </div>
+    </div> {% endcomment %}
     <!-- /.preloader -->
     <div class="page-wrapper">
         <header class="main-header-three">
             <nav class="main-menu main-menu-three">
                 <div class="main-menu-three__wrapper">
                     <div class="main-menu-wrapper__logo">
-                        <a href="index.html"><img src="{% static 'usertemplate/assets/images/resources/logo-2.png'%}" alt=""></a>
+                        <a href=""><img src="{% static 'usertemplate/assets/images/resources/logo-2.png'%}" alt=""></a>
                     </div>
                     <div class="main-menu-three__main-menu">
                         <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
@@ -87,196 +87,18 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li>
+                            {% comment %} <li>
                                 <a href="{% url 'about' %}">About</a>
                             </li>
-                            <li class="dropdown megamenu">
-                                <a href="{% url 'services' %}">Our Services</a>
-                                <ul>
-                                    <li>
-                                        <div class="service-tabs">
-                                            <div class="container">
-                                                <div class="service-tabs__inner tabs-box">
-                                                    <div class="row">
-                                                        <div class="col-md-6 col-lg-4">
-                                                            <ul class="tab-buttons service-tabs__links">
-                                                                <li data-tab="#service-1" class="tab-btn active-btn">
-                                                                    <span>Zero Waste</span>
-                                                                </li>
-                                                                <li data-tab="#service-2" class="tab-btn">
-                                                                    <span>Dumpster Rental</span>
-                                                                </li>
-                                                                <li data-tab="#service-3" class="tab-btn">
-                                                                    <span></span>
-                                                                </li>
-                                                                <li data-tab="#service-4" class="tab-btn">
-                                                                    <span>Recylcing Services</span>
-                                                                </li>
-                                                                <li data-tab="#service-5" class="tab-btn">
-                                                                    <span>Residential Pickup</span>
-                                                                </li>
-                                                                <li data-tab="#service-6" class="tab-btn">
-                                                                    <span>Business Pickup</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div><!-- /.col-md-6 -->
-                                                        <div class="col-md-6 col-lg-8">
-                                                            <div class="tabs-content">
-                                                                <div class="tab active-tab animated fadeInUp"
-                                                                    id="service-1">
-                                                                    <div class="service-tabs__content">
-                                                                        <div class="service-tabs__text">
-                                                                            <h3 class="service-tabs__title"><a
-                                                                                    href="zero-waste.html">Zero
-                                                                                    Waste
-                                                                                    & Recycling
-                                                                                    Pickup</a></h3>
-                                                                            {% comment %} <a class="service-tabs__btn"
-                                                                                href="zero-waste.html">
-                                                                                <i class="fa fa-arrow-right"></i>
-                                                                                View
-                                                                                More
-                                                                            </a> {% endcomment %}
-                                                                            <!-- /.service-tabs__title -->
-                                                                        </div><!-- /.service-tabs__text -->
-                                                                        <div class="service-tabs__image">
-                                                                            <img src="{% static 'usertemplate/assets/images/services/service-m-1-1.png'%}"
-                                                                                alt="">
-                                                                        </div><!-- /.service-tabs__image -->
-                                                                    </div><!-- /.service-tabs__content -->
-                                                                </div>
-
-                                                                <div class="tab" id="service-2">
-                                                                    <div class="service-tabs__content">
-                                                                        <div class="service-tabs__text">
-                                                                            <h3 class="service-tabs__title"><a
-                                                                                    href="dumpster-rental.html">Dumpster
-                                                                                    Rental
-                                                                                    & Recycling
-                                                                                    Pickup</a></h3>
-                                                                            {% comment %} <a class="service-tabs__btn"
-                                                                                href="dumpster-rental.html">
-                                                                                <i class="fa fa-arrow-right"></i>
-                                                                                View
-                                                                                More
-                                                                            </a> {% endcomment %}
-                                                                            <!-- /.service-tabs__title -->
-                                                                        </div><!-- /.service-tabs__text -->
-                                                                        <div class="service-tabs__image">
-                                                                            <img src="{% static 'usertemplate/assets/images/services/service-m-1-2.png'%}"
-                                                                                alt="">
-                                                                        </div><!-- /.service-tabs__image -->
-                                                                    </div><!-- /.service-tabs__content -->
-                                                                </div>
-
-                                                                <div class="tab" id="service-3">
-                                                                    <div class="service-tabs__content">
-                                                                        <div class="service-tabs__text">
-                                                                            <h3 class="service-tabs__title"><a
-                                                                                    href="portable-toilet.html">Portable
-                                                                                    Toilet
-                                                                                    & Recycling
-                                                                                    Pickup</a></h3>
-                                                                            {% comment %} <a class="service-tabs__btn"
-                                                                                href="portable-toilet.html">
-                                                                                <i class="fa fa-arrow-right"></i>
-                                                                                View
-                                                                                More
-                                                                            </a> {% endcomment %}
-                                                                            <!-- /.service-tabs__title -->
-                                                                        </div><!-- /.service-tabs__text -->
-                                                                        <div class="service-tabs__image">
-                                                                            <img src="{% static 'usertemplate/assets/images/services/service-m-1-3.png'%}"
-                                                                                alt="">
-                                                                        </div><!-- /.service-tabs__image -->
-                                                                    </div><!-- /.service-tabs__content -->
-                                                                </div>
-
-                                                                <div class="tab" id="service-4">
-                                                                    <div class="service-tabs__content">
-                                                                        <div class="service-tabs__text">
-                                                                            <h3 class="service-tabs__title"><a
-                                                                                    href="recylcing-services.html">Recylcing
-                                                                                    Services
-                                                                                    & Recycling
-                                                                                    Pickup</a></h3>
-                                                                            {% comment %} <a class="service-tabs__btn"
-                                                                                href="recylcing-services.html">
-                                                                                <i class="fa fa-arrow-right"></i>
-                                                                                View
-                                                                                More
-                                                                            </a> {% endcomment %}
-                                                                            <!-- /.service-tabs__title -->
-                                                                        </div><!-- /.service-tabs__text -->
-                                                                        <div class="service-tabs__image">
-                                                                            <img src="{% static 'usertemplate/assets/images/services/service-m-1-4.png'%}"
-                                                                                alt="">
-                                                                        </div><!-- /.service-tabs__image -->
-                                                                    </div><!-- /.service-tabs__content -->
-                                                                </div>
-
-                                                                <div class="tab" id="service-5">
-                                                                    <div class="service-tabs__content">
-                                                                        <div class="service-tabs__text">
-                                                                            <h3 class="service-tabs__title"><a
-                                                                                    href="residential-pickup.html">Residential
-                                                                                    Pickup
-                                                                                    & Recycling
-                                                                                    Pickup</a></h3>
-                                                                            {% comment %} <a class="service-tabs__btn"
-                                                                                href="residential-pickup.html">
-                                                                                <i class="fa fa-arrow-right"></i>
-                                                                                View
-                                                                                More
-                                                                            </a> {% endcomment %}
-                                                                            <!-- /.service-tabs__title -->
-                                                                        </div><!-- /.service-tabs__text -->
-                                                                        <div class="service-tabs__image">
-                                                                            <img src="{% static 'usertemplate/assets/images/services/service-m-1-5.png'%}"
-                                                                                alt="">
-                                                                        </div><!-- /.service-tabs__image -->
-                                                                    </div><!-- /.service-tabs__content -->
-                                                                </div>
-
-                                                                <div class="tab" id="service-6">
-                                                                    <div class="service-tabs__content">
-                                                                        <div class="service-tabs__text">
-                                                                            <h3 class="service-tabs__title"><a
-                                                                                    href="business-pickup.html">Business
-                                                                                    Waste
-                                                                                    & Recycling
-                                                                                    Pickup</a></h3>
-                                                                            {% comment %} <a class="service-tabs__btn"
-                                                                                href="business-pickup.html">
-                                                                                <i class="fa fa-arrow-right"></i>
-                                                                                View
-                                                                                More
-                                                                            </a> {% endcomment %}
-                                                                            <!-- /.service-tabs__title -->
-                                                                        </div><!-- /.service-tabs__text -->
-                                                                        <div class="service-tabs__image">
-                                                                            <img src="{% static 'usertemplate/assets/images/services/service-m-1-6.png'%}"
-                                                                                alt="">
-                                                                        </div><!-- /.service-tabs__image -->
-                                                                    </div><!-- /.service-tabs__content -->
-                                                                </div>
-                                                            </div><!-- /.tabs-content -->
-                                                        </div><!-- /.col-md-6 -->
-                                                    </div><!-- /.row -->
-                                                </div><!-- /.service-tabs__inner -->
-                                            </div><!-- /.container -->
-                                        </div><!-- /.service-tabs -->
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                {% comment %} <a href="#">Industries</a> {% endcomment %}
+                           {% endcomment %}
+                            {% comment %} <li class="dropdown">
+                                <a href="#">Industries</a>
                                 <ul>
                                     {% comment %} <li><a href="industries.html">Industries</a></li>
                                     <li><a href="industries-carousel.html">Industries Carousel</a></li>
-                                    <li><a href="industry-details.html">Industry Details</a></li> {% endcomment %}
+                                    <li><a href="industry-details.html">Industry Details</a></li> 
                                 </ul>
-                            </li>
+                            </li> {% endcomment %}
                             <li class="dropdown">
                                 <a href="#">Dustbins</a>
                                 <ul>
@@ -297,9 +119,9 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#">News</a>
+                                <a href="{% url 'harithakarma_update' %}">Profile</a>
                                 <ul>
-                                    <li><a href="{% url 'harithakarma_update' %}">Profile</a></li>
+                                    {% comment %} <li><a href="{% url 'harithakarma_update' %}">Profile</a></li> {% endcomment %}
                                     {% comment %} <li><a href="news-carousel.html">News Carousel</a></li>
                                     <li><a href="news-sidebar.html">News Sidebar Right</a></li>
                                     <li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
@@ -310,9 +132,9 @@
                         </ul>
                     </div>
                     <div class="main-menu-three__right">
-                        <div class="main-menu-three__search-box">
+                        {% comment %} <div class="main-menu-three__search-box">
                             <a href="#" class="main-menu-three__search search-toggler icon-magnifying-glass"></a>
-                        </div>
+                        </div> {% endcomment %}
                         <div class="main-menu-three__call">
                             <div class="main-menu-three__call-icon">
                                 <span class="icon-phone-ringing"></span>
@@ -597,10 +419,10 @@
                         <div class="manage-waste__inner">
                             <h3 class="manage-waste__title">Manage Waste Effectively <br> and Reduce Environmental
                                 Impact</h3>
-                            <div class="manage-waste__btn-box">
+                            {% comment %} <div class="manage-waste__btn-box">
                                 <a href="request-pickup.html" class="thm-btn manage-waste__btn-1">Request a Pickup</a>
                                 <a href="contact.html" class="thm-btn manage-waste__btn-2">Contact With us</a>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -1476,11 +1298,9 @@
                             <div class="footer-widget__column footer-widget__links clearfix">
                                 <h3 class="footer-widget__title">Links</h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
-                                    <li><a href="{% url 'about' %}">About</a></li>
-                                    <li><a href="">Request Pickup</a></li>
-                                    <li><a href="{% url 'about' %}">Management</a></li>
-                                    <li><a href="{% url 'services' %}">Start Service</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    <li><a href="{% url 'dustbin_harithakarma_search' %}">Municipality Dustbins</a></li>
+
+                                    <li><a href="{% url 'dustbin_harithakarma_view' %}">Private Dustbins</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1506,10 +1326,9 @@
                                     </div>
                                     <div class="footer-widget__contact-content">
                                         <p class="footer-widget__contact-mail-phone">
-                                            <a href="mailto:needhelp@wostin.com"
-                                                class="footer-widget__contact-mail">needhelp@wostin.com</a>
-                                            <a href="tel:2463330088" class="footer-widget__contact-phone">+ 1- (246)
-                                                333-0088</a>
+                                            {% comment %} <a href="mailto:needhelp@wostin.com"
+                                                class="footer-widget__contact-mail">needhelp@wostin.com</a> {% endcomment %}
+                                            <a href="tel:2463330088" class="footer-widget__contact-phone">8281234567</a>
                                         </p>
                                     </div>
                                 </div>
@@ -1556,11 +1375,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@wostin.com</a>
+                    {% comment %} <a href="mailto:needhelp@packageName__.com">needhelp@wostin.com</a> {% endcomment %}
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:666-888-0000">82812344567</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">

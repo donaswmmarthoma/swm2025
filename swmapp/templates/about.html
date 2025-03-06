@@ -342,7 +342,7 @@
 											<li><a href="news-details.html">News Details</a></li>
 										</ul>
 									</li> {% endcomment %}
-                                    <li><a href="{% url 'logout' %}">Log out</a></li>
+                                    {% comment %} <li><a href="{% url 'logout' %}">Log out</a></li> {% endcomment %}
                                 </ul>
                             </div>
                         </nav>
@@ -928,8 +928,8 @@
                                     </div>
                                     <div class="footer-widget__contact-content">
                                         <p class="footer-widget__contact-mail-phone">
-                                            <a href="mailto:needhelp@wostin.com"
-                                                class="footer-widget__contact-mail">needhelp@wostin.com</a>
+                                            {% comment %} <a href="mailto:needhelp@wostin.com"
+                                                class="footer-widget__contact-mail">needhelp@wostin.com</a> {% endcomment %}
                                             <a href="tel:2463330088" class="footer-widget__contact-phone">8281234567</a>
                                         </p>
                                     </div>
@@ -977,7 +977,7 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@wostin.com</a>
+                    {% comment %} <a href="mailto:needhelp@packageName__.com">needhelp@wostin.com</a> {% endcomment %}
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>

@@ -1,4 +1,4 @@
-{% extends 'header.html' %}
+{% extends 'harithakarma_header.html' %}
 {% block content %}
 <html>
 <head>
@@ -13,8 +13,8 @@
             <th>Muncipality</th>
             <th>Contact Number</th>
             <th>Email</th>
+            <th>Garbage Collection</th>
             
-
           </tr>
         </thead>
         <tbody>
@@ -29,7 +29,12 @@
            <td>{{ data.muncipality }}</td>
            <td>{{ data.contact_no }}</td>
            <td>{{ data.login_id.email }}</td>
+           {% if data.collection_status == 1 %}
+           <td>Collected</td>
+           {% else %}
            <td><a class="btn btn-primary" href="{% url 'wastecollection' data.id %}">Collect</a></td>
+           
+           {% endif %}
            </tr>
           {% endfor %}
         </tbody>

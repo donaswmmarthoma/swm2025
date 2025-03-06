@@ -63,7 +63,7 @@
         <header class="main-header clearfix">
             <div class="main-header__inner clearfix">
                 <div class="main-header__logo">
-                    <a href="index.html"><img src="{% static 'usertemplate/assets/images/resources/logo-1.png'%}" alt=""></a>
+                    <a href=""><img src="{% static 'usertemplate/assets/images/resources/logo-1.png'%}" alt=""></a>
                 </div>
                 <div class="main-menu__menu-box">
                     <div class="main-menu__menu-top">
@@ -307,7 +307,7 @@
                                         </ul>
                                     </li>
                                      <li class="dropdown">
-                                        <a href="{% url 'logout' %}">  Log Out</a>
+                                        {% comment %} <a href="{% url 'logout' %}">  Log Out</a> {% endcomment %}
 										{% comment %} <a href="#">Industries</a> {% endcomment %}
 										<ul>
 											{% comment %} <li><a href="industries.html">Industries</a></li>
@@ -1014,8 +1014,8 @@
                             <div class="footer-widget__column footer-widget__about">
                                 <h3 class="footer-widget__title">About</h3>
                                 <div class="footer-widget__about-text-box">
-                                    <p class="footer-widget__about-text">Lorem ipsum dolor sited ame etur adi pisicing
-                                        elit tempor labore.</p>
+                                    <p class="footer-widget__about-text">
+                                        To make India’s development journey sustainable and to make Indian cities cleaner, healthier, and more liveable..</p>
                                 </div>
                                 <form class="footer-widget__newsletter-form">
                                     <div class="footer-widget__newsletter-input-box">
@@ -1060,8 +1060,8 @@
                                     </div>
                                     <div class="footer-widget__contact-content">
                                         <p class="footer-widget__contact-mail-phone">
-                                            <a href="mailto:needhelp@wostin.com"
-                                                class="footer-widget__contact-mail">needhelp@wostin.com</a>
+                                            {% comment %} <a href="mailto:needhelp@wostin.com"
+                                                class="footer-widget__contact-mail">solidwastemanagement123@gmail.com</a> {% endcomment %}
                                             <a href="tel:2463330088" class="footer-widget__contact-phone">8281234567</a>
                                         </p>
                                     </div>

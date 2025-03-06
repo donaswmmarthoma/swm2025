@@ -1,4 +1,4 @@
-{% extends 'header.html' %}
+{% extends 'driver_header.html' %}
 {% block content %}
 <html>
     <head>
@@ -8,8 +8,37 @@
         <h1>Update your Profile!</h1>
         <form method="post">
             {% csrf_token %}
-            {{ updateform.as_p}}
-            {{ logform.as_p}}
+            <table align="center">
+                <tr>
+                    <td><label>Name:</label></td>
+                    <td>{{updateform.name}}</td>
+                </tr>
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>{{updateform.gender}}</td>
+                </tr>
+                <tr>
+                    <td><label>Age:</label></td>
+                    <td>{{updateform.age}}</td>
+                </tr>
+                <tr>
+                    <td><label>Muncipality:</label></td>
+                    <td>{{updateform.municipality}}</td>
+                </tr>
+                <tr>
+                    <td><label>Contact Number:</label></td>
+                    <td>{{updateform.contact_no}}</td>
+                </tr>
+                <tr>
+                    <td><label>Email:</label></td>
+                    <td>{{logform.email}}</td>
+                </tr>
+                <tr>
+                    
+                    <td><label>Password:</label></td>
+                    <td>{{logform.password}}</td>
+                </tr>
+            </table>
             <button  class="thm-btn contact-one__btn" type="submit">Update</button>
         </form>
     </body>

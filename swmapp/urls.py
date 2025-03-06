@@ -60,6 +60,7 @@ urlpatterns = [
     path('notify_user_view', views.notify_user_view, name='notify_user_view'),
     path('dustbin_harithakarma_view', views.dustbin_harithakarma_view, name='dustbin_harithakarma_view'),
     path('dustbin_driver_view', views.dustbin_driver_view, name='dustbin_driver_view'),
+    path('muncipality_waste_view', views.muncipality_waste_view, name='muncipality_waste_view'),
     path('wastecollection/<int:id>', views.wastecollection, name='wastecollection'),
     path('logout', views.logout, name='logout'),
 ]

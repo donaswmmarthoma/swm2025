@@ -8,8 +8,18 @@
          {% comment %} <h1>Registration Form</h1> {% endcomment %}
         <form method="post">
             {% csrf_token %}
-            {{ public_dustbinform.as_p}}
-            {% comment %} {{ loginform.as_p }}  {% endcomment %}
+            <table align="center">
+                <tr>
+                    <td><label>Dustbin ID:</label></td>
+                    <td>{{public_dustbinform.dustbin_id}}</td>
+                </tr>
+                <tr>
+                    <td><label>Location:</label></td>
+                    <td>{{public_dustbinform.location}}</td>
+                </tr>
+               
+            </table>
+           
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
     </body>

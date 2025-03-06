@@ -1,4 +1,4 @@
-{% extends 'header.html' %}
+{% extends 'user_header.html' %}
 {% block content %}
 <html>
     <head>
@@ -8,8 +8,28 @@
         <h1>Apply for Dustbin</h1>
         <form method="post">
             {% csrf_token %}
-            {{ dustbinform.as_p}}
-            <!-- {{ loginform.as_p }} -->
+          <table align="center">
+            <tr>
+                    
+                <td><label>Building Category:</label></td>
+                <td>{{dustbinform.building_category}}</td>
+            </tr>
+            <tr>
+                    
+                <td><label>Address:</label></td>
+                <td>{{dustbinform.address}}</td>
+            </tr>
+            <tr>
+                    
+                <td><label>Muncipality:</label></td>
+                <td>{{dustbinform.muncipality}}</td>
+            </tr>
+            <tr>
+                    
+                <td><label>Contact Number:</label></td>
+                <td>{{dustbinform.contact_no}}</td>
+            </tr>
+        </table>
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
     </body>

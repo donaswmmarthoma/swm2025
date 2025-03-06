@@ -55,9 +55,9 @@
 </head>
 
 <body>
-    <div class="preloader">
+    {% comment %} <div class="preloader">
         <img class="preloader__image" width="60" src="{% static 'usertemplate/assets/images/loader.png'%}" alt="" />
-    </div>
+    </div> {% endcomment %}
     <!-- /.preloader -->
     <div class="page-wrapper">
         <header class="main-header clearfix">
@@ -70,8 +70,8 @@
                         <div class="main-menu__menu-top-left">
                             <p class="main-menu__menu-top-text">Welcome To Waste Disposal & Pickup Services.</p>
                             <div class="main-menu__menu-top-btn-box">
-                                <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
-                                    Pickup</a>
+                                {% comment %} <a href="request-pickup.html" class="thm-btn main-menu__menu-top-btn">Request a
+                                    Pickup</a> {% endcomment %}
                             </div>
                         </div>
                         <div class="main-menu__menu-top-right">
@@ -102,68 +102,58 @@
                                 <ul class="main-menu__list">
                                     <li class="dropdown">
                                         <a href="{% url 'home' %}">Home</a>
-                                        <ul>
-                                            {% comment %} <li>
+                                        {% comment %} <ul>
+                                            <li>
                                                 <a href="index.html">Home One</a>
-                                            </li> {% endcomment %}
-                                            {% comment %} <li><a href="index2.html">Home Two</a></li>
-                                            <li><a href="index3.html">Home Three</a></li> {% endcomment %}
-                                            <li class="dropdown">
-                                                {% comment %} <a href="#">Header Styles</a> {% endcomment %}
+                                            </li>
+                                        <li><a href="index2.html">Home Two</a></li>
+                                            <li><a href="index3.html">Home Three</a></li>
+                                            <li class="dropdown">     
+                                                <a href="#">Header Styles</a>
                                                 <ul>
-                                                    {% comment %} <li><a href="index.html">Header One</a></li>
+                                                   <li><a href="index.html">Header One</a></li>
                                                     <li><a href="index2.html">Header Two</a></li>
-                                                    <li> {% endcomment %}
-                                                        {% comment %} <a href="index3.html">Header Three</a> {% endcomment %}
+                                                    <li> 
+                                                        <a href="index3.html">Header Three</a>
                                                         <ul>
-                                                            {% comment %} <li><a href="index.html">Header One</a></li>
+                                                         <li><a href="index.html">Header One</a></li>
                                                             <li><a href="index2.html">Header Two</a></li>
-                                                            <li><a href="index3.html">Header Three</a></li> {% endcomment %}
+                                                            <li><a href="index3.html">Header Three</a></li> 
                                                         </ul>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </li> {% endcomment %}
+                                    <li class="dropdown">
+                                        <a href="#">Dustbins</a>
+                                        <ul>
+                                            <li><a href="{% url 'dustbin_driver_search' %}">Municipality Dustbins</a></li>
+        
+                                            <li><a href="{% url 'dustbin_driver_view' %}">Private Dustbins</a></li>
+                                            {% comment %} <li><a href="project-details.html">Project Details</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                            <li><a href="request-pickup.html">Request A Pickup</a></li>
+                                            <li><a href="staff.html">Staff</a></li>
+                                            <li><a href="staff-carousel.html">Staff Carousel</a></li>
+                                            <li><a href="staff-details.html">Staff Details</a></li>
+                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                            <li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                            <li><a href="faq.html">FAQs</a></li>
+                                            <li><a href="404.html">404 Error</a></li> {% endcomment %}
+                                        </ul>
                                     </li>
-                                    <li>
-                                        <a href="{% url 'dustbin_driver_view' %}">Private Dustbins</a>
+                                    <li class="dropdown">
+                                        <a href="{% url 'driver_update' %}">Profile</a>
+                                        <ul>
+                                            {% comment %} <li><a href="{% url 'harithakarma_update' %}">Profile</a></li> {% endcomment %}
+                                            {% comment %} <li><a href="news-carousel.html">News Carousel</a></li>
+                                            <li><a href="news-sidebar.html">News Sidebar Right</a></li>
+                                            <li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
+                                            <li><a href="news-details.html">News Details</a></li> {% endcomment %}
+                                        </ul>
                                     </li>
-                                   
-                                    <li class="dropdown">
-										{% comment %} <a href="#">Industries</a> {% endcomment %}
-										<ul>
-											{% comment %} <li><a href="industries.html">Industries</a></li>
-											<li><a href="industries-carousel.html">Industries Carousel</a></li>
-											<li><a href="industry-details.html">Industry Details</a></li> {% endcomment %}
-										</ul>
-									</li>
-                                    <li class="dropdown">
-										<a href="{% url 'dustbin_driver_search'%}">Muncipality Dustbins</a>
-										<ul>
-											{% comment %} <li><a href="{% url 'dustbin_driver_search'%}">Muncipality Dustbins</a></li> {% endcomment %}
-											{% comment %} <li><a href="projects-carousel.html">Projects Carousel</a></li>
-											<li><a href="project-details.html">Project Details</a></li>
-											<li><a href="pricing.html">Pricing</a></li>
-											<li><a href="request-pickup.html">Request A Pickup</a></li>
-											<li><a href="staff.html">Staff</a></li>
-											<li><a href="staff-carousel.html">Staff Carousel</a></li>
-											<li><a href="staff-details.html">Staff Details</a></li>
-											<li><a href="testimonials.html">Testimonials</a></li>
-											<li><a href="testimonials-carousel.html">Testimonials Carousel</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li><a href="faq.html">FAQs</a></li>
-											<li><a href="404.html">404 Error</a></li> {% endcomment %}
-										</ul>
-									</li>
-                                    <li class="dropdown">
-										<a href="{% url 'driver_update' %}">Profile</a>
-										{% comment %} <ul>
-											<li><a href="{% url 'driver_update' %}">Profile</a></li>
-											<li><a href="news-carousel.html">News Carousel</a></li>
-											<li><a href="news-sidebar.html">News Sidebar Right</a></li>
-											<li><a href="news-sidebar-left.html">News Sidebar Left</a></li>
-											<li><a href="news-details.html">News Details</a></li>
-										</ul> {% endcomment %}
 									</li>
                                     <li><a href="{% url 'logout' %}">Log out</a></li>
                                 </ul>
@@ -224,7 +214,7 @@
 
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/main-slider-1-2.jpg'%});">
+                            style="background-image: url({% static 'usertemplate/assets/images/backgrounds/driver2.jpg'%});">
                         </div>
                         <!-- /.image-layer -->
                         <div class="container">
@@ -249,7 +239,7 @@
                                 <div class="col-xl-12">
                                     <div class="main-slider__content">
                                         <h2>Reuse, recycle,  <br> and reduce the waste  <span>for a better future.</span> </h2>
-                                        <a href="request-pickup.html" class="thm-btn">Request a Pickup</a>
+                                        {% comment %} <a href="request-pickup.html" class="thm-btn">Request a Pickup</a> {% endcomment %}
                                     </div>
                                 </div>
                             </div>
@@ -1180,11 +1170,8 @@
                             <div class="footer-widget__column footer-widget__links clearfix">
                                 <h3 class="footer-widget__title">Links</h3>
                                 <ul class="footer-widget__links-list list-unstyled clearfix">
-                                    <li><a href="{% url 'about' %}">About</a></li>
-                                    <li><a href="">Request Pickup</a></li>
-                                    <li><a href="{% url 'about' %}">Management</a></li>
-                                    <li><a href="{% url 'services' %}">Start Service</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="{% url 'dustbin_driver_search' %}">Municipality Dustbins</a></li>
+                                    <li><a href="{% url 'dustbin_driver_view' %}">Private Dustbins</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1210,8 +1197,8 @@
                                     </div>
                                     <div class="footer-widget__contact-content">
                                         <p class="footer-widget__contact-mail-phone">
-                                            <a href="mailto:needhelp@wostin.com"
-                                                class="footer-widget__contact-mail">needhelp@wostin.com</a>
+                                            {% comment %} <a href="mailto:needhelp@wostin.com"
+                                                class="footer-widget__contact-mail">needhelp@wostin.com</a> {% endcomment %}
                                             <a href="tel:2463330088" class="footer-widget__contact-phone">8281234567</a>
                                         </p>
                                     </div>
