@@ -326,7 +326,7 @@
                       <thead>
                         <tr>
                           <th>Harithakarma id</th>
-                          <th>Panchayath</th>
+                          <th>Municipality</th>
                           <th>Contact Number</th>
                           <th>Email</th>
                           <th>Accept</th>
@@ -339,7 +339,7 @@
                         {% for data in harithakarma_adminview %}
                          <tr>
                          <td>{{ data.harithakarma_id }}</td>
-                         <td>{{ data.panchayath }}</td>
+                         <td>{{ data.muncipality }}</td>
                          <td>{{ data.contact_no }}</td>
                          <td>{{ data.login_id.email }}</td>
                          {% if data.login_id.status == 0 %}

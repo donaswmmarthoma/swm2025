@@ -318,8 +318,8 @@ iframe {
   box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
   -moz-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
   -webkit-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
-  -o-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
-  -ms-box-shadow: 0 10px 30px 0px rgba(189, 89, 212, 0.8);
+  -o-box-shadow: 0 10px 30px 0px rgba(220, 210, 222, 0.8);
+  -ms-box-shadow: 0 10px 30px 0px rgba(240, 237, 240, 0.8);
 }
 
 
@@ -349,7 +349,7 @@ iframe {
   position: absolute;
   width: 100%;
   min-height: 62px;
-  background-color: #fff;
+  background-color: #eadfdf;
   border-radius: 20px;
   top: 0px;
   left: 0px;

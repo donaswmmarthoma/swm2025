@@ -8,7 +8,13 @@
         <h1> Update your Waste Details!!</h1>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p}}
+            {% comment %} {{ form.as_p}} {% endcomment %}
+            <table align="center">
+                <tr>
+                    <td><label>Weight:</label></td>
+                    <td class="contact-one__form-input-box">{{form.weight}}</td>
+                </tr>
+            </table>
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
     </body>

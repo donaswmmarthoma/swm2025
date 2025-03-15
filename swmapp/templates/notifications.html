@@ -3,17 +3,29 @@
 <html>
     <head>
         <title>Notifications</title>
-    </head>
+         <style>
+            .contact-one__form-input-box{
+                max-width : 50px
+                height : 30px
+                margin-left :40px
+            }
+         </style> 
+    </head> 
     <body align="center">
         <h1>Enter Notifications</h1>
         <form method="post">
             {% csrf_token %}
-            <div>
+            <center>
+               <div class="col-xl-4 col-lg-1 col-md-2"> 
+            <div class="contact-one__form-input-box">
+                
             <label>Notifications</label>
-            <textarea name="notifications" ></textarea>
+            <textarea name="notifications"></textarea>
+                </div>
             </div>
+        </center>
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
-    </body>
+    </body> 
 </html>
 {% endblock %} 

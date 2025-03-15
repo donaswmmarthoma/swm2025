@@ -8,9 +8,15 @@
         <h1>Update Notifications!</h1>
         <form method="post">
             {% csrf_token %}
-            {{ updateform.as_p}}
-            <button  class="thm-btn contact-one__btn" type="submit">Update</button>
-        </form>
+            <center>
+            <div class="col-xl-4 col-lg-1 col-md-2">
+            <div class="contact-one__form-input-box">
+                <textarea id="notifications" name="notifications" rows="4" cols="50">{{ updateform.notifications.value }}</textarea>
+                </div>
+                </div>
+            </div>
+        </center>
+                <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
     </body>
 </html>
 {% endblock %}

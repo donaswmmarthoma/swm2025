@@ -156,7 +156,7 @@
 										<a href="#"> Dustbins</a>
 										<ul>
 											<li><a href="{% url 'public_dustbin_reg' %}">Register Dustbins</a></li>
-											<li><a href="{% url 'public_dustbin_view'%}">View Muncipality Dustbins</a></li>
+											<li><a href="{% url 'public_dustbin_view'%}"><small>View Municipality Dustbins</small></a></li>
                                             <li><a href="{% url 'muncipality_payment_view' %}">Dustbin Requests</a></li>
 										</ul>
 									</li>
@@ -197,7 +197,7 @@
                    
                     <div class="main-header__right-call-number">
                         {% comment %} <p>Have Waste/Pickup?</p> {% endcomment %}
-                        <h5 style="color: white;"><button class="btn btn-secondary"><a href="{% url 'logout' %}">Log out</a></h5></button>
+                        <h5 style="color: white;"><button class="btn btn-primary"><a href="{% url 'logout' %}">Log out</a></h5></button>
                     </div>
             </div>
             

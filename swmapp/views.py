@@ -23,6 +23,9 @@ def login(request):
                     elif user.usertype == 'harithakarma':
                         request.session['harithakarmaid'] = user.id
                         return redirect('harithakarma_home')
+                    elif user.usertype == 'admin':
+                        request.session['adminid'] = user.id
+                        return redirect('admin')
                     elif user.usertype == 'public':
                         request.session['publicid'] = user.id
                         return redirect('usertemplate')
@@ -114,7 +117,7 @@ def Harithakarma_Reg(request,):
         loginform = LoginForm(request.POST)
         if harithakarmaform.is_valid() and loginform.is_valid():
             logindata = loginform.save(commit=False)
-            logindata.usertype='harithakarma'
+            logindata.usertype = 'harithakarma'
             logindata.save()
             data = harithakarmaform.save(commit=False)
             data.login_id = logindata
@@ -124,6 +127,7 @@ def Harithakarma_Reg(request,):
         harithakarmaform = HarithakarmaRegister()
         loginform = LoginForm()
     return render(request, 'harithakarma_reg.html',{'harithakarmaform':harithakarmaform,'loginform':loginform})
+
 def Driver_Reg(request):
     if request.method == 'POST':
         driverform = DriverRegister(request.POST)

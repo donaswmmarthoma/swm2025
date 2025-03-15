@@ -325,7 +325,7 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Muncipality Name</th>
+                          <th>Municipality Name</th>
                           <th>Address</th>
                           <th>City</th>
                           <th>Thaluk</th>
@@ -350,11 +350,11 @@
                          <td><a class="btn btn-primary" href="{% url 'admin_muncipality_accept' data.login_id.id %}">Accept</a></td>
                          <td><a class="btn btn-secondary" href="{% url 'admin_muncipality_reject' data.login_id.id %}">Reject</a></td>
                          {% elif data.login_id.status == 1 %}
-                         <td><a class="btn btn-primary" href="">Accepted</a></td>
+                         <td><a class="btn btn-outline-success" disabled href="">Accepted</a></td>
                          <td><a class="btn btn-secondary" href="{% url 'admin_muncipality_reject' data.login_id.id %}">Reject</a></td>
                          {% else  %}
                          <td><a class="btn btn-primary" href="{% url 'admin_muncipality_accept' data.login_id.id %}">Accept</a></td>
-                         <td><a class="btn btn-secondary" href="">Rejected</a></td>
+                         <td><a class="btn btn-outline-danger" disabled href="">Rejected</a></td>
                          {% endif %}
                          </tr>
                         {% endfor %}

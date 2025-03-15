@@ -8,10 +8,14 @@
         <h1> Reply to the Complaints!</h1>
         <form method="post">
             {% csrf_token %}
-            <div>
+            <center>
+            <div  class="col-xl-4 col-lg-1 col-md-2">
+            <div class="contact-one__form-input-box">
             <label>Reply:</label>
-            <textarea name="reply" ></textarea>
+            <textarea name="reply"></textarea>
             </div>
+            </div>
+        </center>
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>
         </form>
     </body>

@@ -98,10 +98,11 @@ class Public_Dustbin_Form(forms.ModelForm):
     
     class Meta:
         model = Public_Dustbin_Register
-        fields = ['dustbin_id','location'] 
+        fields = ['dustbin_id','latitude','longitude'] 
         widgets ={
             'dustbin_id':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
-            'location':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
+            'latitude':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
+            'longitude':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
         }
 
 class WasteUpdateForm(forms.ModelForm): 

@@ -81,7 +81,7 @@
                                         <span class="icon-email"></span>
                                     </div>
                                     <div class="text">
-                                        <p><a href="mailto:needhelp@company.com">needhelp@wostin.com</a></p>
+                                        <p><a href="mailto:needhelp@company.com">solidwastemanagement123@gmail.com</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -306,6 +306,15 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    <li class="dropdown">
+                                        <a href="#">Registrations</a>
+                                        <ul>
+                                            <li><a href="{% url 'muncipal_reg' %}">Municipality</a></li>
+                                            <li><a href="{% url 'public_reg' %}">Users</a></li>
+                                            <li><a href="{% url 'driver_reg' %}">Garbage Collector Driver</a></li>
+                                            <li><a href="{% url 'harithakarma_reg' %}">Harithakarma Sena</a></li>
+                                        </ul>
+                                    </li>
                                      <li class="dropdown">
                                         {% comment %} <a href="{% url 'logout' %}">  Log Out</a> {% endcomment %}
 										{% comment %} <a href="#">Industries</a> {% endcomment %}
@@ -333,6 +342,7 @@
 											<li><a href="404.html">404 Error</a></li> {% endcomment %}
 										</ul>
 									</li>
+                                    
                                     <li class="dropdown">
 										{% comment %} <a href="#">News</a> {% endcomment %}
 										<ul>
@@ -343,7 +353,10 @@
 											<li><a href="news-details.html">News Details</a></li> {% endcomment %}
 										</ul>
 									</li>
-                                    
+
+                                    <div class="main-menu-two__btn-box">
+                                        <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                                    </div> 
                             </div>
                         </nav>
                     </div>
@@ -366,7 +379,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url({% static 'usertemplate/assets/images/backgrounds/page-header-bg.jpg'%})">
+            <div class="page-header-bg" style="background-image: url({% static 'usertemplate/assets/images/backgrounds/banner7.jpg'%})">
             </div>
             <div class="container">
                 <div class="page-header__inner">

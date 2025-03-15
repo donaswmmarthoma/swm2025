@@ -122,7 +122,7 @@
                                         <a href="{% url 'about' %}">About</a>
                                     </li>
                                     <li class="dropdown megamenu">
-                                        <a href="{% url 'services' %}">Services</a>
+                                        <a href="{% url 'services' %}">Our Services</a>
                                         <ul>
                                             <li>
                                                 <div class="service-tabs">
@@ -139,7 +139,7 @@
                                                                             <span>Dumpster Rental</span>
                                                                         </li>
                                                                         <li data-tab="#service-3" class="tab-btn">
-                                                                            <span></span>
+                                                                            <span>Portable Toilet</span>
                                                                         </li>
                                                                         <li data-tab="#service-4" class="tab-btn">
                                                                             <span>Recylcing Services</span>
@@ -207,9 +207,9 @@
                                                                             <div class="service-tabs__content">
                                                                                 <div class="service-tabs__text">
                                                                                     <h3 class="service-tabs__title"><a
-                                                                                            href="portable-toilet.html">
-                                                                                        
-                                                                                         Recycling
+                                                                                            href="portable-toilet.html">Portable
+                                                                                            Toilet
+                                                                                            & Recycling
                                                                                             Pickup</a></h3>
                                                                                     {% comment %} <a class="service-tabs__btn"
                                                                                         href="portable-toilet.html">
@@ -259,13 +259,13 @@
                                                                                             Pickup
                                                                                             & Recycling
                                                                                             Pickup</a></h3>
-                                                                                    <a class="service-tabs__btn"
+                                                                                    {% comment %} <a class="service-tabs__btn"
                                                                                         href="residential-pickup.html">
                                                                                         <i
                                                                                             class="fa fa-arrow-right"></i>
                                                                                         View
                                                                                         More
-                                                                                    </a>
+                                                                                    </a> {% endcomment %}
                                                                                     <!-- /.service-tabs__title -->
                                                                                 </div><!-- /.service-tabs__text -->
                                                                                 <div class="service-tabs__image">
@@ -306,13 +306,12 @@
                                                 </div><!-- /.service-tabs -->
                                             </li>
                                         </ul>
-                                    </li>
                                     <li class="dropdown">
                                         <a href="#">Registrations</a>
                                         <ul>
-                                            <li><a href="{% url 'muncipal_reg' %}">Muncipality</a></li>
+                                            <li><a href="{% url 'muncipal_reg' %}">Municipality</a></li>
                                             <li><a href="{% url 'public_reg' %}">Users</a></li>
-                                            <li><a href="{% url 'driver_reg' %}">Garbage Collector Driver</a></li>
+                                            <li><a href="{% url 'driver_reg' %}">Driver</a></li>
                                             <li><a href="{% url 'harithakarma_reg' %}">Harithakarma Sena</a></li>
                                         </ul>
                                     </li>

@@ -1,4 +1,4 @@
-{% extends 'regheader.html' %}
+{% extends 'muncipal_header.html' %}
 {% block content %}
 <html>
     <head>
@@ -11,13 +11,16 @@
             <table align="center">
                 <tr>
                     <td><label>Dustbin ID:</label></td>
-                    <td>{{public_dustbinform.dustbin_id}}</td>
+                    <td class="contact-one__form-input-box">{{public_dustbinform.dustbin_id}}</td>
                 </tr>
                 <tr>
-                    <td><label>Location:</label></td>
-                    <td>{{public_dustbinform.location}}</td>
+                    <td><label>Latitude:</label></td>
+                    <td class="contact-one__form-input-box">{{public_dustbinform.latitude}}</td>
                 </tr>
-               
+                <tr>
+                    <td><label>Longitude:</label></td>
+                    <td class="contact-one__form-input-box">{{public_dustbinform.longitude}}</td>
+                </tr>
             </table>
            
             <button  class="thm-btn contact-one__btn" type="submit">Submit</button>

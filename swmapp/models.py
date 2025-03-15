@@ -76,7 +76,8 @@ class Account(models.Model):
 
 class Public_Dustbin_Register(models.Model):
     dustbin_id= models.IntegerField()
-    location = models.CharField( max_length=50)
+    latitude = models.CharField(max_length=100)
+    longitude = models.CharField(max_length=100)
     login_id = models.ForeignKey(LoginTable,on_delete=models.CASCADE) 
     date = models.DateField(auto_now_add=True)
 
