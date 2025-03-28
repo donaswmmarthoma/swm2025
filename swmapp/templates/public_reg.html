@@ -2,8 +2,8 @@
 {% block content %}
 {% load static %}
 <html>
-    <link rel="stylesheet" href="{% static 'usertemplate/assets/css/wostin.css'%}" />
-    <link rel="stylesheet" href="{% static 'usertemplate/assets/css/wostin-responsive.css'%}" />
+    {% comment %} <link rel="stylesheet" href="{% static 'usertemplate/assets/css/wostin.css'%}" />
+    <link rel="stylesheet" href="{% static 'usertemplate/assets/css/wostin-responsive.css'%}" /> {% endcomment %}
     <title>Public Registration</title>
     <body align="center">
         <form method="post">
@@ -27,8 +27,9 @@
                 </tr>
                 <tr>
                     <td><label>Municipality:</label></td>
-                    <td class="request-a-pickup__tab-content-input-box">{{ publicform.muncipality }}</td>
+                    <td class="contact-one__form-input-box">{{ publicform.muncipality }}</td>
                 </tr>
+                
                 <tr>
                     <td><label>Village:</label></td>
                     <td class="contact-one__form-input-box">{{ publicform.village }}</td>

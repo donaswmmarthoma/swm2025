@@ -201,8 +201,8 @@
                     <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a> {% endcomment %}
                   </div>
                 </li>
-
-                <li role="presentation" class="nav-item dropdown open">
+                <a class="btn btn-secondary"  href="{% url 'logout' %}"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                {% comment %} <li role="presentation" class="nav-item dropdown open">
                   <a class="btn btn-secondary"  href="{% url 'logout' %}"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-envelope-o"></i>
@@ -264,7 +264,7 @@
                           <i class="fa fa-angle-right"></i>
                         </a>
                       </div>
-                    </li>
+                    </li> {% endcomment %}
                   </ul>
                 </li>
               </ul>
@@ -386,7 +386,7 @@
           <div class="row">
 
 
-            <div class="col-md-4 col-sm-4 ">
+            {% comment %} <div class="col-md-4 col-sm-4 ">
               <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
                   <h2>App Versions</h2>
@@ -491,9 +491,9 @@
 
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
 
-            <div class="col-md-4 col-sm-4 ">
+            {% comment %} <div class="col-md-4 col-sm-4 ">
               <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <div class="x_title">
                   <h2>Device Usage</h2>
@@ -569,10 +569,10 @@
                   </table>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
 
 
-            <div class="col-md-4 col-sm-4 ">
+            {% comment %} <div class="col-md-4 col-sm-4 ">
               <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
                   <h2>Quick Settings</h2>
@@ -620,7 +620,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
 
           </div>
 
@@ -629,15 +629,15 @@
             <div class="col-md-4 col-sm-4 ">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Recent Activities <small>Sessions</small></h2>
+                  <h2>Recent Activities <small></small></h2>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Settings 1</a>
-                          <a class="dropdown-item" href="#">Settings 2</a>
+                          {% comment %} <a class="dropdown-item" href="#">Settings 1</a>
+                          <a class="dropdown-item" href="#">Settings 2</a> {% endcomment %}
                         </div>
                     </li>
                     <li><a class="close-link"><i class="fa fa-close"></i></a>
@@ -653,13 +653,12 @@
                         <div class="block">
                           <div class="block_content">
                             <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                              <a>Request for pickups</a>
                                           </h2>
                             <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
+                              <span>13 hours ago</span> <a></a>
                             </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
+                            <p class="excerpt">17 pickup requests found!!!!!!</p>
                           </div>
                         </div>
                       </li>
@@ -667,13 +666,12 @@
                         <div class="block">
                           <div class="block_content">
                             <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                              <a>Complaints</a>
                                           </h2>
                             <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
+                              <span>5 hours ago</span>  <a></a>
                             </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
+                            <p class="excerpt">12 complaints found registered!!</p>
                           </div>
                         </div>
                       </li>
@@ -681,13 +679,12 @@
                         <div class="block">
                           <div class="block_content">
                             <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                              <a>Notifications</a>
                                           </h2>
                             <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
+                              <span>1 hours ago</span> by <a>Muncipality</a>
                             </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
+                            <p class="excerpt">12 Notifications</p>
                           </div>
                         </div>
                       </li>
@@ -695,13 +692,12 @@
                         <div class="block">
                           <div class="block_content">
                             <h2 class="title">
-                                              <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                              <a>Registerations</a>
                                           </h2>
                             <div class="byline">
-                              <span>13 hours ago</span> by <a>Jane Smith</a>
+                              <span></a>
                             </div>
-                            <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
-                            </p>
+                            <p class="excerpt">45 registerations</p>
                           </div>
                         </div>
                       </li>
@@ -718,7 +714,7 @@
 
               <div class="row">
 
-                <div class="col-md-12 col-sm-12 ">
+                {% comment %} <div class="col-md-12 col-sm-12 ">
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Visitors location <small>geo-presentation</small></h2>
@@ -771,7 +767,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> {% endcomment %}
 
               </div>
               <div class="row">
@@ -788,8 +784,8 @@
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="#">Settings 1</a>
-                              <a class="dropdown-item" href="#">Settings 2</a>
+                              {% comment %} <a class="dropdown-item" href="#">Settings 1</a>
+                              <a class="dropdown-item" href="#">Settings 2</a> {% endcomment %}
                             </div>
                         </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
@@ -803,7 +799,27 @@
                         <ul class="to_do">
                           <li>
                             <p>
-                              <input type="checkbox" class="flat"> Schedule meeting with new client </p>
+                              <input type="checkbox" class="flat"> Accept munciplalities </p>
+                          </li>
+                          <li>
+                            <p>
+                              <input type="checkbox" class="flat">  Accept harithakarma</p>
+                          </li>
+                          <li>
+                            <p>
+                              <input type="checkbox" class="flat"> Check Users</p>
+                          </li>
+                          <li>
+                            <p>
+                              <input type="checkbox" class="flat"> Accept Drivers</p>
+                          </li>
+                          {% comment %} <li>
+                            <p>
+                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
+                          </li>
+                          <li>
+                            <p>
+                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
                           </li>
                           <li>
                             <p>
@@ -816,27 +832,7 @@
                           <li>
                             <p>
                               <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
+                          </li> {% endcomment %}
                         </ul>
                       </div>
                     </div>
@@ -845,7 +841,7 @@
                 <!-- End to do list -->
                 
                 <!-- start of weather widget -->
-                <div class="col-md-6 col-sm-6 ">
+                {% comment %} <div class="col-md-6 col-sm-6 ">
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Daily active users <small>Sessions</small></h2>
@@ -945,7 +941,7 @@
                         <div class="clearfix"></div>
                       </div>
                     </div>
-                  </div>
+                  </div> {% endcomment %}
 
                 </div>
                 <!-- end of weather widget -->

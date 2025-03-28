@@ -5,7 +5,7 @@ class LoginTable(models.Model):
     email = models.EmailField(unique=True)
     password = models.CharField(max_length=10)
     usertype = models.CharField(max_length=20,null=True)
-    status = models.IntegerField()
+    status = models.IntegerField(default=0)
     
 class MuncipalityReg(models.Model):
     muncipality_name = models.CharField(max_length=100)
@@ -28,6 +28,7 @@ class PublicReg(models.Model):
     contact_no = models.IntegerField(unique=True)
     rationcard_no = models.IntegerField(unique=True)
     login_id = models.OneToOneField(LoginTable,on_delete=models.CASCADE,related_name="log")
+    
 class HarithakarmaReg(models.Model):
     harithakarma_id = models.CharField(max_length=100,unique=True)
     muncipality = models.CharField(max_length=100)

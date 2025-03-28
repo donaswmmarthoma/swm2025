@@ -20,8 +20,9 @@ class LoginForm(forms.ModelForm):
             'email':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'password':forms.TextInput(attrs={'class':'contact-one__form-input-box'})
         }  
+
 class PublicRegister(forms.ModelForm):
-    muncipality = forms.ModelChoiceField(queryset=MuncipalityReg.objects.all(), empty_label="Select Muncipality") 
+    muncipality = forms.ModelChoiceField(queryset=MuncipalityReg.objects.all(), empty_label="Select Muncipality")
     class Meta:
         model = PublicReg
         fields = ['name','address','district','city','muncipality','village','contact_no','rationcard_no']  
@@ -30,10 +31,10 @@ class PublicRegister(forms.ModelForm):
             'address':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'district':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'city':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
-            'muncipality':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
+            'muncipality':forms.Select(attrs={'class':'contact-one__form-input-box'}),
             'village':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'contact_no':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
-            'rationcard_no':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
+            'rationcard_no':forms.TextInput(attrs={'class':'contact-one__form-input-box'})
 
         }   
  
@@ -56,7 +57,7 @@ class DriverRegister(forms.ModelForm):
             'name':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'gender':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'age':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
-            'muncipality':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
+            'muncipality':forms.Select(attrs={'class':'contact-one__form-input-box'}),
             'contact_no':forms.TextInput(attrs={'class':'contact-one__form-input-box'})
 }
 class LoginCheck(forms.Form):
@@ -74,7 +75,7 @@ class DustbinRegister(forms.ModelForm):
         widgets ={
             'building_category':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
             'address':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
-            'muncipality':forms.TextInput(attrs={'class':'contact-one__form-input-box'}),
+            'muncipality':forms.Select(attrs={'class':'contact-one__form-input-box'}),
             'contact_no':forms.TextInput(attrs={'class':'contact-one__form-input-box'}) 
         }
 

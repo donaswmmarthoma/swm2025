@@ -1016,10 +1016,14 @@ ul {
   visibility: hidden;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+  -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+ -webkit-transform 500ms ease 0ms;
+  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+ -webkit-transform 500ms ease 0ms;
+  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+ transform 500ms ease 0ms;
+  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms,
+ transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
 }
 
 .mobile-nav__wrapper.expanded .mobile-nav__content {
@@ -1027,10 +1031,14 @@ ul {
   visibility: visible;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  -webkit-transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+ -webkit-transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+ -webkit-transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+ transform 500ms ease 500ms;
+  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms,
+ transform 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
 }
 
 .mobile-nav__content .wostin-btn {
@@ -1995,10 +2003,23 @@ ul {
           transform: translateY(100px);
   -webkit-transition-delay: 2500ms;
           transition-delay: 2500ms;
-  -webkit-transition: opacity 2000ms ease, color 500ms ease, background 500ms ease, -webkit-transform 2000ms ease;
-  transition: opacity 2000ms ease, color 500ms ease, background 500ms ease, -webkit-transform 2000ms ease;
-  transition: transform 2000ms ease, opacity 2000ms ease, color 500ms ease, background 500ms ease;
-  transition: transform 2000ms ease, opacity 2000ms ease, color 500ms ease, background 500ms ease, -webkit-transform 2000ms ease;
+  -webkit-transition: opacity 2000ms ease,
+ color 500ms ease,
+ background 500ms ease,
+ -webkit-transform 2000ms ease;
+  transition: opacity 2000ms ease,
+ color 500ms ease,
+ background 500ms ease,
+ -webkit-transform 2000ms ease;
+  transition: transform 2000ms ease,
+ opacity 2000ms ease,
+ color 500ms ease,
+ background 500ms ease;
+  transition: transform 2000ms ease,
+ opacity 2000ms ease,
+ color 500ms ease,
+ background 500ms ease,
+ -webkit-transform 2000ms ease;
 }
 
 .main-slider .thm-btn:hover {
@@ -2393,10 +2414,14 @@ ul {
           transform: translateX(0);
   -webkit-transition-delay: 3000ms;
           transition-delay: 3000ms;
-  -webkit-transition: opacity 2000ms ease, color 500ms ease, background 500ms ease, -webkit-transform 2000ms ease;
-  transition: opacity 2000ms ease, color 500ms ease, background 500ms ease, -webkit-transform 2000ms ease;
-  transition: transform 2000ms ease, opacity 2000ms ease, color 500ms ease, background 500ms ease;
-  transition: transform 2000ms ease, opacity 2000ms ease, color 500ms ease, background 500ms ease, -webkit-transform 2000ms ease;
+  -webkit-transition: opacity 2000ms ease, color 500ms ease,
+ background 500ms ease, -webkit-transform 2000ms ease;
+  transition: opacity 2000ms ease, color 500ms ease,
+ background 500ms ease, -webkit-transform 2000ms ease;
+  transition: transform 2000ms ease, opacity 2000ms ease, color 500ms ease,
+ background 500ms ease;
+  transition: transform 2000ms ease, opacity 2000ms ease, color 500ms ease,
+ background 500ms ease, -webkit-transform 2000ms ease;
 }
 
 .main-slider-three-car img {
@@ -6020,6 +6045,34 @@ ul {
   color: var(--wostin-gray);
   font-weight: 500;
   padding: 20px 40px 30px;
+}
+.contact-one__form-input-box select {
+  height: 63px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: var(--wostin-extra);
+  font-size: 14px;
+  color: var(--wostin-gray);
+  font-weight: 500;
+  padding: 0 30px 0;
+  -webkit-appearance: none; /* Removes default styling on WebKit browsers */
+  -moz-appearance: none; /* Removes default styling on Firefox */
+  appearance: none; /* Standard property for modern browsers */
+  text-indent: 10px; /* Optional: Adds spacing for text */
+}
+
+.contact-one__form-input-box select:focus {
+  border: none;
+  outline: none;
+  background-color: var(--wostin-extra); /* Optional: Keeps the background color on focus */
+}
+
+.contact-one__form-input-box select option {
+  background-color: var(--wostin-extra);
+  color: var(--wostin-gray);
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .contact-one__form-input-box.text-message-box {

@@ -17,7 +17,7 @@ def login(request):
                 print('hii')
                 if user.password == password:
                     print('hii2')
-                    if user.usertype == 'muncipality':
+                    if user.usertype == 'muncipality'and user.status ==1:
                         request.session['muncipalityid'] = user.id
                         return redirect('muncipality_home')
                     elif user.usertype == 'harithakarma':
